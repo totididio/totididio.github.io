@@ -1,0 +1,19 @@
+{
+  "name": "salvatoredidio-site",
+  "version": "1.0.0",
+  "description": "Personal site of Salvatore Di Dio — static, English-only, under a hard carbon budget.",
+  "license": "CC-BY-SA-4.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "eleventy && node scripts/inject-page-weight.js",
+    "serve": "eleventy --serve",
+    "build:prod": "NODE_ENV=production eleventy && node scripts/inject-page-weight.js",
+    "budget": "node scripts/carbon-budget.js",
+    "check": "npm run build && npm run budget"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@tgwf/co2": "^0.16.0"
+  }
+}

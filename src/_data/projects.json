@@ -1,0 +1,21 @@
+[
+  {
+    "name": "MUV",
+    "when": "since 2020",
+    "text": "A digital game played in the real world. It rewards people who travel sustainably and measures the CO<sub>2</sub> they avoid with an algorithm certified by RINA to ISO 14064-II. Over 180,000 kilometres travelled sustainably, 21 cities. It is also the infrastructure that produces the data behind much of my research.",
+    "url": "https://www.muvgame.com"
+  },
+  {
+    "name": "B-CIRCULAR",
+    "when": "until 2029",
+    "text": "How to build a circular economy from textile waste, across three cities in southern Italy: Palermo, Cagliari, Reggio Calabria. Scientific lead, with Fondazione CON IL SUD.",
+    "url": null
+  },
+  {
+    "name": "Interferenze",
+    "when": null,
+    "text": "A podcast where an environmental physicist and a room of design students trace everyday news back to the broken systems behind it.",
+    "url": null,
+    "todo": "Interferenze — start date or period, and a link (site, Spotify, RSS)"
+  }
+]

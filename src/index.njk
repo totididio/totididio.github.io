@@ -1,0 +1,144 @@
+---
+layout: layouts/base.njk
+title: "Salvatore Di Dio — Researcher, designer, social entrepreneur"
+description: "Associate Professor of Design at the University of Palermo. I design for the gap between what people know about the climate and what they actually do."
+---
+
+<section class="claim">
+  <h1>Cities change when the people change.</h1>
+  <p class="subclaim">How to design for better behaviour, leaner cities and a future by design, not by disaster.</p>
+  <p class="tagline">
+    <strong>Researcher &middot; Designer &middot; Social entrepreneur</strong><br>
+    <span>Associate Professor of Design &mdash; University of Palermo</span>
+  </p>
+
+  <figure class="plate">
+    <picture>
+      <source srcset="/assets/img/public-space.avif" type="image/avif">
+      <img src="/assets/img/public-space.webp" width="1400" height="933" fetchpriority="low"
+           decoding="async"
+           alt="A crowd fills a city park for an open-air music event: people dance on the paved
+                circle, others watch from the low wall and the grass. In the foreground a woman
+                sits on the slope with one arm raised. Behind the park, a crossing, a bus, and the
+                apartment blocks of the neighbourhood.">
+    </picture>
+    <figcaption>New York, 2016. Photograph by the author.</figcaption>
+  </figure>
+</section>
+
+<section class="bridge">
+  <p>Since 2010, with scholars, practitioners and professionals across multiple countries, I have been
+     asking the same question in different settings: why do people who recognise the climate
+     emergency still behave as if it were not happening? It is called the
+     attitude&ndash;behaviour gap, and trying to close it is what I design for.</p>
+  <p>At the <a href="{{ site.unipa }}">University of Palermo</a> I study it. With <a href="https://www.wepush.org/">PUSH</a> we
+     test it in real environments. With <a href="https://www.muvgame.com/">MUV</a> we turned it
+     into a platform that measures what happens. With
+     <a href="https://www.piranesiexperience.com/">Piranesi</a> we tell it to people who will
+     never read a paper.</p>
+  <p class="coda">Four instruments, one line of research.</p>
+</section>
+
+<section class="now" aria-labelledby="h-now">
+  <h2 id="h-now">Now</h2>
+  <ul>
+    {%- for item in now.items %}
+    <li>{{ item.text | safe }}<span class="when">{{ item.when }}</span></li>
+    {%- endfor %}
+  </ul>
+  <p class="updated">Updated {{ now.updated | readableDate }}</p>
+</section>
+
+<section aria-labelledby="h-projects">
+  <h2 id="h-projects">Three projects</h2>
+  <div class="cards">
+    {%- for p in projects %}
+    <article class="card">
+      <h3>{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</h3>
+      {% if p.when %}<span class="when">{{ p.when }}</span>{% endif %}
+      <p>{{ p.text | safe }}{% if p.todo %} {% todo p.todo %}{% endif %}</p>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="oneline" aria-labelledby="h-research">
+  <h2 id="h-research">Research</h2>
+  <p>More than 65 publications on design, behaviour and urban sustainability.
+     {% todo "choose the four venues to show here — candidates in README_ricerca.md" %}</p>
+  <ul class="links">
+{%- if site.scholar %}
+    <li><a href="{{ site.scholar }}">Google Scholar</a></li>
+{%- else %}
+    <li>{% todo "Google Scholar profile ID" %}</li>
+{%- endif %}
+    <li><a href="https://orcid.org/{{ site.orcid }}">ORCID</a></li>
+    <li><a href="/research/">All research</a></li>
+  </ul>
+</section>
+
+<section aria-labelledby="h-talk">
+  <h2 id="h-talk">Talks and interviews</h2>
+
+  <!-- Degrades to a plain link with JavaScript off. The script upgrades it into a
+       click-to-load embed, so nobody pays 500 KB for a video they never play. -->
+  <figure class="facade">
+    <a id="talk" href="{{ talks.featured.url }}" data-embed="{{ talks.featured.youtube }}">
+      {% todo "self-hosted poster for the talk — AVIF ≤ 60 KB. A still from the video needs TEDx's licence checked first" %}
+      <figcaption>
+        <strong lang="{{ talks.featured.lang }}">{{ talks.featured.title }}</strong><br>
+        {{ talks.featured.event }}, {{ talks.featured.year }}
+        <span class="play">Watch the talk &rarr;</span>
+      </figcaption>
+    </a>
+  </figure>
+
+  <div class="scroll-x">
+    <table class="data">
+      <caption class="visually-hidden">Other talks and interviews</caption>
+      <thead>
+        <tr><th scope="col">Title</th><th scope="col">Where</th><th scope="col">Year</th></tr>
+      </thead>
+      <tbody>
+        {%- for t in talks.talks %}
+        <tr>
+          <td><a href="{{ t.url }}"{% if t.lang %} lang="{{ t.lang }}"{% endif %}>{{ t.title }}</a></td>
+          <td>{{ t.where }}</td>
+          <td class="num">{{ t.year }}</td>
+        </tr>
+        {%- endfor %}
+        {%- for t in talks.appearances %}
+        <tr>
+          <td><a href="{{ t.url }}"{% if t.lang %} lang="{{ t.lang }}"{% endif %}>{{ t.title }}</a></td>
+          <td>{{ t.where }}</td>
+          <td class="num">&mdash;</td>
+        </tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% todo "show name and date for the two podcast episodes — the Where and Year cells stay vague without them" %}
+
+  <p><a href="/talks/">All talks and interviews</a></p>
+</section>
+
+<section class="contact" aria-labelledby="h-contact">
+  <h2 id="h-contact">Contact</h2>
+  <p>I answer my own email &mdash; there is no press office. To invite me to speak, to discuss a
+     thesis, to propose a collaboration: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  <p>Bio, photographs and talk titles are ready in the
+     <a href="/talks/press-kit/">press kit</a>.</p>
+</section>
+
+<script>/* video facade — the only script on this site */
+document.querySelectorAll("a[data-embed]").forEach(function(a){
+  a.addEventListener("click",function(e){
+    var id=a.dataset.embed; if(!id) return;
+    e.preventDefault();
+    var f=document.createElement("iframe");
+    f.src="https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1";
+    f.title=a.textContent.trim(); f.width=560; f.height=315; f.allow="autoplay; fullscreen";
+    f.style.cssText="width:100%;aspect-ratio:16/9;border:0;display:block";
+    a.replaceWith(f); f.focus();
+  });
+});</script>

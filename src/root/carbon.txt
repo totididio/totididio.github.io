@@ -1,0 +1,10 @@
+version = "0.5"
+last_updated = 2026-09-16
+
+[org]
+disclosures = [
+  { doc_type = "web-page", url = "https://salvatoredidio.com/colophon/", domain = "salvatoredidio.com" }
+]
+
+[upstream]
+services = [ { domain = "pages.dev", service_type = "shared-hosting" } ]
