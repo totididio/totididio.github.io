@@ -1,12 +1,14 @@
 <footer class="site-foot wrap">
   <p>This page weighs <span class="weight" data-page-weight>— KB</span> and emitted about
      <span class="weight" data-page-carbon>— g</span> of CO<sub>2</sub>e.
-     <a href="/colophon/">How this site is built</a></p>
+     {%- if "/colophon/" | hasPage(collections.all) %} <a href="/colophon/">How this site is built</a>{% endif %}</p>
   <p>Hosted on verified green energy ({{ site.greenHost }}), checked against
      <a href="https://www.thegreenwebfoundation.org/green-web-check/">The Green Web Foundation</a>.</p>
   <ul>
     <li>Text and images <a href="{{ site.licence.url }}">{{ site.licence.name }}</a></li>
+    {%- if "/privacy/" | hasPage(collections.all) %}
     <li><a href="/privacy/">Privacy</a></li>
+    {%- endif %}
     <li>Last updated {{ site.updated | readableDate }}</li>
   </ul>
 </footer>

@@ -1,5 +1,5 @@
 version = "0.5"
-last_updated = 2026-09-16
+last_updated = 2026-11-05
 
 [org]
 disclosures = [
@@ -7,4 +7,7 @@ disclosures = [
 ]
 
 [upstream]
-services = [ { domain = "pages.dev", service_type = "shared-hosting" } ]
+services = [
+  { domain = "github.io", service_type = "shared-hosting" },
+  { domain = "fastly.com", service_type = "cdn" }
+]

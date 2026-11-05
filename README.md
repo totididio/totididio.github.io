@@ -73,22 +73,16 @@ Current: **2.9 KB Brotli, on a budget of 8.**
 
 ## Deploying
 
-No remote, no CI. Two ways, both manual.
+**GitHub Pages**, from `github.com/totididio/totididio.github.io`, branch `main`. Every push
+runs `.github/workflows/deploy.yml`: `npm ci` → `build:prod` → **carbon budget** → check that
+no placeholder ships → deploy. If the budget fails, nothing is published.
 
-**Wrangler**, from the repo root:
+One-time setting: *Settings → Pages → Build and deployment → Source: **GitHub Actions***.
+Custom domain `salvatoredidio.com` (DNS at OVH), HTTPS enforced.
 
-```bash
-npm run build:prod
-npx wrangler pages deploy _site --project-name salvatoredidio
-```
-
-**Or drag `_site/` onto the Cloudflare Pages dashboard.**
-
-Either way, run `npm run budget` first. Without a CI gate it is the only thing standing
-between a heavy page and production.
-
-The domain `salvatoredidio.com` is registered at OVH and still has to be pointed at
-Cloudflare.
+Hosting verified green by The Green Web Foundation (5 Nov 2026): `salvatoredidio.com` and
+`totididio.github.io` are served by Fastly. Alternative considered: OVH free hosting
+(also green, EU-based, but FTP-only deploys and no CDN).
 
 ---
 
@@ -96,11 +90,8 @@ Cloudflare.
 
 | What | Where | Blocks |
 |---|---|---|
-| Google Scholar profile ID | `src/_data/site.json` | The Research links list |
 | Poster for the TEDx facade, AVIF ≤ 60 KB | `src/assets/img/` | Nothing — the facade already works as a link. Check the TEDx licence before using a video still |
-| Show name and date for the two podcast episodes | `src/_data/talks.json` | The weakest rows on the page: no source, no date |
-| Start date and link for Interferenze | `src/_data/projects.json` | The only one of the three project cards that cannot be verified |
-| Four publication venues to show | `src/index.njk` | The Research line |
+| Start date and link for Interferenze | `src/_data/projects.json` | Shown as "coming soon" until then |
 | Personal commentary on each publication | — | `/research/`. Half a day of writing with Salvatore. The single highest-value thing left, and the only one nobody else can write |
 
 Every one of these is a visible yellow marker in `npm run build`. They vanish in

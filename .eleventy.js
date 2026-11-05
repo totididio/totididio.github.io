@@ -12,6 +12,13 @@ export default function (eleventyConfig) {
     });
   });
 
+  // A link is printed only when its page exists, so the site can be published
+  // one page at a time without ever shipping a 404.
+  eleventyConfig.addFilter("hasPage", (url, all) =>
+    (all || []).some((p) => p.url === url));
+  eleventyConfig.addFilter("existingPages", (items, all) =>
+    (items || []).filter((i) => (all || []).some((p) => p.url === i.url)));
+
   // Placeholders are visible in development and refuse to ship in production.
   eleventyConfig.addShortcode("todo", function (note) {
     if (process.env.NODE_ENV === "production") {

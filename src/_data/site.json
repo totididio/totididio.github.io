@@ -5,13 +5,13 @@
   "email": "salvatore.didio@unipa.it",
   "orcid": "0000-0002-3364-5433",
   "unipa": "https://www.unipa.it/persone/docenti/d/salvatore.didio",
-  "scholar": null,
+  "scholar": "https://scholar.google.com/citations?user=-ppXlVMAAAAJ",
   "licence": {
     "name": "CC BY-SA 4.0",
     "url": "https://creativecommons.org/licenses/by-sa/4.0/"
   },
-  "greenHost": "Cloudflare Pages",
-  "updated": "2026-09-16",
+  "greenHost": "GitHub Pages, served by Fastly",
+  "updated": "2026-11-05",
   "nav": [
     {
       "label": "Research",

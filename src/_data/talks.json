@@ -23,15 +23,16 @@
       "lang": "it",
       "kind": "podcast guest",
       "url": "https://open.spotify.com/episode/4Vf7EZmRlTIgwtPS4j5fXk",
-      "todo": "show name and date",
-      "where": "Podcast, as a guest"
+      "where": "Made in Sicily (podcast)",
+      "year": 2024
     },
     {
       "title": "Course design with AI",
       "kind": "podcast guest",
       "url": "https://open.spotify.com/episode/12QsF2IeQerB05mHyUguUt",
-      "todo": "show name and date",
-      "where": "Podcast, as a guest"
+      "where": "FORTHEM Digital Competence podcast",
+      "year": 2025,
+      "lang": "en"
     }
   ]
 }

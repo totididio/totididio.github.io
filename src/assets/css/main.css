@@ -329,12 +329,15 @@ main > section > * + * { margin-top: var(--s6); }
   transition: transform 160ms var(--ease-out);
 }
 .facade:active { transform: scale(0.99); }
-.facade figcaption strong { font-family: var(--font-serif); font-size: var(--fs-m); }
-.facade figcaption {
+/* The whole card is the link: underline only the call to action, not every line. */
+.facade { text-decoration: none; }
+.facade .play { text-decoration: underline; text-underline-offset: 0.2em; }
+.facade .cap strong { font-family: var(--font-serif); font-size: var(--fs-m); }
+.facade .cap {
+  display: block;
   font-family: var(--font-sans);
   font-size: var(--fs-s);
   padding: var(--s4);
-  border-top: 1px solid var(--line);
 }
 .facade .play {
   font-family: var(--font-sans);

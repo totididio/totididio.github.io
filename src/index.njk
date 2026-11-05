@@ -64,16 +64,17 @@ description: "Associate Professor of Design at the University of Palermo. I desi
 
 <section class="oneline" aria-labelledby="h-research">
   <h2 id="h-research">Research</h2>
-  <p>More than 65 publications on design, behaviour and urban sustainability.
-     {% todo "choose the four venues to show here — candidates in README_ricerca.md" %}</p>
+  <p>Over 50 publications on design, behaviour and urban sustainability, in journals
+     including <cite>Sustainable Cities and Society</cite>, <cite>Sustainability</cite>,
+     <cite>Heliyon</cite> and <cite>Energies</cite>.</p>
   <ul class="links">
+    <li><a href="https://orcid.org/{{ site.orcid }}">ORCID</a></li>
 {%- if site.scholar %}
     <li><a href="{{ site.scholar }}">Google Scholar</a></li>
-{%- else %}
-    <li>{% todo "Google Scholar profile ID" %}</li>
 {%- endif %}
-    <li><a href="https://orcid.org/{{ site.orcid }}">ORCID</a></li>
+{%- if "/research/" | hasPage(collections.all) %}
     <li><a href="/research/">All research</a></li>
+{%- endif %}
   </ul>
 </section>
 
@@ -82,16 +83,13 @@ description: "Associate Professor of Design at the University of Palermo. I desi
 
   <!-- Degrades to a plain link with JavaScript off. The script upgrades it into a
        click-to-load embed, so nobody pays 500 KB for a video they never play. -->
-  <figure class="facade">
-    <a id="talk" href="{{ talks.featured.url }}" data-embed="{{ talks.featured.youtube }}">
-      {% todo "self-hosted poster for the talk — AVIF ≤ 60 KB. A still from the video needs TEDx's licence checked first" %}
-      <figcaption>
-        <strong lang="{{ talks.featured.lang }}">{{ talks.featured.title }}</strong><br>
-        {{ talks.featured.event }}, {{ talks.featured.year }}
-        <span class="play">Watch the talk &rarr;</span>
-      </figcaption>
-    </a>
-  </figure>
+  <a class="facade" id="talk" href="{{ talks.featured.url }}" data-embed="{{ talks.featured.youtube }}">
+    <span class="cap">
+      <strong lang="{{ talks.featured.lang }}">{{ talks.featured.title }}</strong><br>
+      {{ talks.featured.event }}, {{ talks.featured.year }}
+      <span class="play">Watch the talk &rarr;</span>
+    </span>
+  </a>
 
   <div class="scroll-x">
     <table class="data">
@@ -111,23 +109,25 @@ description: "Associate Professor of Design at the University of Palermo. I desi
         <tr>
           <td><a href="{{ t.url }}"{% if t.lang %} lang="{{ t.lang }}"{% endif %}>{{ t.title }}</a></td>
           <td>{{ t.where }}</td>
-          <td class="num">&mdash;</td>
+          <td class="num">{{ t.year or "&mdash;" | safe }}</td>
         </tr>
         {%- endfor %}
       </tbody>
     </table>
   </div>
-  {% todo "show name and date for the two podcast episodes — the Where and Year cells stay vague without them" %}
-
+  {%- if "/talks/" | hasPage(collections.all) %}
   <p><a href="/talks/">All talks and interviews</a></p>
+  {%- endif %}
 </section>
 
 <section class="contact" aria-labelledby="h-contact">
   <h2 id="h-contact">Contact</h2>
   <p>I answer my own email &mdash; there is no press office. To invite me to speak, to discuss a
      thesis, to propose a collaboration: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  {%- if "/talks/press-kit/" | hasPage(collections.all) %}
   <p>Bio, photographs and talk titles are ready in the
      <a href="/talks/press-kit/">press kit</a>.</p>
+  {%- endif %}
 </section>
 
 <script>/* video facade — the only script on this site */
