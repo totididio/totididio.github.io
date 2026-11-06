@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-06",
   "items": [
     {
-      "text": "Three projects I worked on were selected for the ADI Design Index 2026: Instant Handbook (teaching), OSMOSI (research) and the Museum of the Diffuse Cities of the World (public engagement)",
+      "text": "Three projects I worked on were selected for the ADI Design Index 2026: <a href=\"https://www.adi-design.org/2026_r00658\">Instant Handbook</a> (teaching), <a href=\"https://www.adi-design.org/2026_o00681\">OSMOSI</a> (research) and the <a href=\"https://www.adi-design.org/2026_o00531\">Museum of the Diffuse Cities of the World</a> (public engagement)",
       "when": "October 2026"
     },
     {
@@ -10,24 +10,8 @@
       "when": "since May 2025"
     },
     {
-      "text": "Scientific lead of B-CIRCULAR, on circular economy from textile waste across Palermo, Cagliari and Reggio Calabria (Fondazione CON IL SUD)",
-      "when": "until 2029"
-    },
-    {
-      "text": "Scientific lead for MUV in NEXT-GEN URBAN FREIGHT LOGISTICS (Horizon MISS-2024)",
-      "when": "since January 2026"
-    },
-    {
       "text": "Deputy Coordinator of the Master's in Interaction Design UX/UI, University of Palermo",
       "when": "since September 2025"
-    },
-    {
-      "text": "Speaker at Innovate4Cities 2026 in Nairobi (UN-Habitat and the Global Covenant of Mayors), with a paper on MUV's AI-driven game engine for sustainable mobility behaviour change",
-      "when": "June 2026"
-    },
-    {
-      "text": "I am writing on digital clones for marginal rural areas: AI agents that amplify local expertise instead of replacing it. Case study: the Madonie",
-      "when": "in progress"
     }
   ]
 }
