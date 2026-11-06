@@ -1,0 +1,54 @@
+---
+layout: layouts/base.njk
+title: "Research — Salvatore Di Dio"
+description: "How design can produce more sustainable behaviour in cities: open questions, research areas and selected publications."
+---
+{#- DRAFT: built in development only, never in production, until the commentaries are written. -#}
+<article class="page">
+  <header>
+    <h1>Research</h1>
+    <p class="lede">One question runs through everything I have published: how design can produce
+       more sustainable behaviour in cities.</p>
+    <p>I work where service design, social innovation and urban sustainability meet, through action
+       research with real communities. The book that holds the argument together is
+       <cite>{{ research.book.title }}</cite> ({{ research.book.venue }}, {{ research.book.year }}).</p>
+  </header>
+
+  <section aria-labelledby="questions">
+    <h2 id="questions">Open questions</h2>
+    <ol class="questions">
+    {%- for q in research.questions %}
+      <li>{{ q }}</li>
+    {%- endfor %}
+    </ol>
+  </section>
+
+  {%- for a in research.areas %}
+  <section aria-labelledby="area-{{ loop.index }}">
+    <h2 id="area-{{ loop.index }}">{{ a.title }}</h2>
+    <p>{{ a.text }}</p>
+    <ul class="refs">
+    {%- for r in a.refs %}
+      <li>
+        {% if r.doi %}<a href="https://doi.org/{{ r.doi }}"{% if r.lang %} lang="{{ r.lang }}"{% endif %}>{{ r.title }}</a>{% else %}<cite{% if r.lang %} lang="{{ r.lang }}"{% endif %}>{{ r.title }}</cite>{% endif %}
+        <span class="venue">{{ r.venue }}, {{ r.year }}</span>
+        {% todo "one or two lines of commentary, in Salvatore's voice" %}
+      </li>
+    {%- endfor %}
+    </ul>
+    {%- if a.frontier %}
+    <p class="frontier">{{ a.frontier }}</p>
+    {%- endif %}
+  </section>
+  {%- endfor %}
+
+  <section aria-labelledby="all">
+    <h2 id="all">Everything else</h2>
+    <p>The complete list of publications is on ORCID and Google Scholar. Funded projects, with roles
+       and grant numbers, are on the {% if "/projects/" | hasPage(collections.all) %}<a href="/projects/#funded">projects page</a>{% else %}projects page{% endif %}.</p>
+    <ul class="links">
+      <li><a href="https://orcid.org/{{ site.orcid }}">ORCID</a></li>
+      <li><a href="{{ site.scholar }}">Google Scholar</a></li>
+    </ul>
+  </section>
+</article>

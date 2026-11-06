@@ -153,16 +153,15 @@ main > section > * + * { margin-top: var(--s6); }
   text-decoration: none;
 }
 
-/* No hamburger: it needs JS or a :checked hack. On narrow screens the nav
-   becomes a horizontally scrollable row. */
+/* No hamburger: it needs JS or a :checked hack. On narrow screens the items
+   wrap onto a second line — every page stays visible, nothing hides off-screen. */
 .site-nav ul {
   display: flex;
-  gap: var(--s6);
+  flex-wrap: wrap;
+  gap: 0 var(--s6);
   margin: 0;
   padding: 0;
   list-style: none;
-  overflow-x: auto;
-  scrollbar-width: none;
 }
 .site-nav a {
   font-family: var(--font-sans);
@@ -385,6 +384,20 @@ main > section > * + * { margin-top: var(--s6); }
 .page li + li { margin-top: var(--s3); }
 .page .scroll-x + p { margin-top: var(--s6); }
 code { font-family: var(--font-mono); font-size: 0.9em; }
+
+.page h2 .when { font-family: var(--font-mono); font-size: var(--fs-xs); font-weight: 400; color: var(--accent-2); margin-left: var(--s2); }
+.page h3 { margin-top: var(--s8); }
+.facts { max-width: var(--measure); margin: 0; }
+.facts dt { font-family: var(--font-sans); font-size: var(--fs-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft); margin-top: var(--s4); }
+.facts dd { margin: var(--s1) 0 0; }
+.data.text td:not(:first-child) { white-space: normal; }
+.data.text td.num { white-space: nowrap; }
+.questions { max-width: var(--measure); padding-left: 1.4em; font-size: var(--fs-m); line-height: 1.45; }
+.page .refs, .page .links { list-style: none; padding-left: 0; }
+.refs li + li { margin-top: var(--s4); }
+.refs .venue { display: block; font-family: var(--font-sans); font-size: var(--fs-xs); color: var(--ink-soft); }
+.frontier { border-left: 3px solid var(--accent-2); padding-left: var(--s4); }
+.page .facade + .facade { margin-top: var(--s4); }
 
 /* Under the talk card: what clicking it costs, said before the click. */
 .facade-note {

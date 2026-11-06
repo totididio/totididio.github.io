@@ -1,0 +1,47 @@
+{
+  "book": { "title": "From Smart to Lean: How to Design for Better Cities, Happier Citizens and Save the World", "venue": "Altralinea Edizioni", "year": 2018, "isbn": "9788894869361" },
+  "questions": [
+    "How can a generative AI system for behaviour change be personalised, ethically robust and culturally sensitive at the same time?",
+    "What is the role of design in regenerating marginal rural areas, and how can AI tools amplify local agency without replacing it?",
+    "How do we measure the long-term effects of games on sustainable mobility habits, after the game ends?",
+    "How should design education change to train professionals able to face this century's challenges: climate, social justice, AI?",
+    "Which models of governance make hybrid spaces work in southern Italy?"
+  ],
+  "areas": [
+    { "title": "Games and behaviour change for sustainable mobility",
+      "text": "The core of my work, from trafficO2 in 2012 to MUV. People recognise the climate emergency and still take the car: games designed on solid theory — Self-Determination Theory, player typologies — can build motivation and habits that outlast the rewards.",
+      "refs": [
+        { "title": "Involving people in the building up of smart and sustainable cities: How to influence commuters' behaviors through a mobile app game", "venue": "Sustainable Cities and Society", "year": 2018, "doi": "10.1016/j.scs.2018.07.021" },
+        { "title": "Pursuing softer urban mobility behaviors through game-based apps", "venue": "Heliyon", "year": 2020, "doi": "10.1016/j.heliyon.2020.e03930" },
+        { "title": "Engaging Gen Z in Transformational Games: How Complementary Features Enhance Core Mechanics for Sustainable Mobility", "venue": "Games and Learning Alliance, Springer", "year": 2026, "doi": "10.1007/978-3-032-11043-5_16" } ] },
+    { "title": "Generative AI in design and sustainability",
+      "text": "How large language models can sit inside behaviour-change platforms, design studios and participatory governance, without hiding their biases or replacing the people they serve.",
+      "refs": [
+        { "title": "GenAI for Sustainable Mobility Behavior Change: Building MUV's AI Driven Game Engine", "venue": "IEEE MT-ITS", "year": 2025, "doi": "10.1109/mt-its68460.2025.11223550" },
+        { "title": "AI, Metaverse and co-design for social innovation: an application protocol", "venue": "Interaction Design and Architecture(s)", "year": 2026, "doi": "10.55612/s-5002-068-005" } ],
+      "frontier": "Work in progress: digital clones for marginal rural areas — AI agents that amplify the expertise of local doctors, teachers, farmers and elders to support participatory governance where skills are scarce. Case study: the Madonie, Sicily." },
+    { "title": "Design education",
+      "text": "What design schools teach, and what they leave out. A critique of a discipline still rooted in consumption, and proposals for an education that is transdisciplinary, ethical and driven by missions.",
+      "refs": [
+        { "title": "Designing the Future: A Manifesto for Design Education", "venue": "Intelligent Human Systems Integration (IHSI)", "year": 2024, "doi": "10.54941/ahfe1004537" },
+        { "title": "Advancing Design Education: Integrating Service Design, Peer Mentoring and Generative AI in Project-Based Learning", "venue": "EDULEARN25", "year": 2025, "doi": "10.21125/edulearn.2025.0988" },
+        { "title": "Design e transizione digitale: nuove sfide design-driven per l'innovazione tecno-sociale", "venue": "AGATHÓN", "year": 2022, "doi": "10.19229/2464-9309/12192022", "lang": "it" } ] },
+    { "title": "Hybrid spaces, co-design and urban social innovation",
+      "text": "Places that are at once physical and digital — cultural hubs, living labs, neighbourhood spaces — and how their design supports participation. Action research with real actors, from Palermo to the Madonie.",
+      "refs": [
+        { "title": "Designing Hybrid Spaces: Envisioning Plural Ecosystems and Socio-Cultural Practices", "venue": "FrancoAngeli, co-edited with Laura Galluzzo", "year": 2025, "isbn": "9788835183099" },
+        { "title": "Urban Innovation Through Co-design Scenarios. Lessons from Palermo", "venue": "Springer", "year": 2019, "doi": "10.1007/978-3-319-92022-1_10" } ] },
+    { "title": "Sustainable cities: mobility, data and policy",
+      "text": "Urban mobility as the meeting point of service design, data, public policy and behaviour — and the wider question of how cities move towards circularity.",
+      "refs": [
+        { "title": "Designing mobility in a city in transition: challenges from the case of Palermo", "venue": "TeMA Journal of Land Use, Mobility and Environment", "year": 2014, "doi": "10.6092/1970-9870/2514" },
+        { "title": "Measuring the Change Towards More Sustainable Mobility: MUV Impact Evaluation Approach", "venue": "Systems", "year": 2019, "doi": "10.3390/systems7020030" },
+        { "title": "A Win-Win Scheme for Improving the Environmental Sustainability of University Commuters' Mobility and Getting Environmental Credits", "venue": "Energies", "year": 2022, "doi": "10.3390/en15020396" },
+        { "title": "Circular Cities: A Systematic Literature Review of Urban Strategies for Sustainable Transitions", "venue": "Sustainability", "year": 2026, "doi": "10.3390/su18062980" } ] },
+    { "title": "Cooperatives, housing and community",
+      "text": "How service design and digital tools can support mutual values and cohesion in housing cooperatives.",
+      "refs": [
+        { "title": "Habitat e servizi. Ripensare l'abitare cooperativo", "venue": "Quodlibet", "year": 2025, "isbn": "9788822923875", "lang": "it" },
+        { "title": "New digital instruments for the community building in housing cooperatives", "venue": "Palermo University Press", "year": 2019, "doi": "10.19229/978-88-5509-055-1/2122019" } ] }
+  ]
+}
