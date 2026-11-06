@@ -29,7 +29,7 @@
           "venue": "Heliyon",
           "year": 2020,
           "doi": "10.1016/j.heliyon.2020.e03930",
-          "note": "\"Softer\" is the point. Nobody was forced out of a car: the game made the other choice more interesting, and we measured what followed."
+          "note": "Not a ban, a ladder. Each commuter starts from the habits they already have, and the game raises the target one step at a time."
         },
         {
           "title": "Engaging Gen Z in Transformational Games: How Complementary Features Enhance Core Mechanics for Sustainable Mobility",
@@ -56,7 +56,7 @@
           "venue": "Interaction Design and Architecture(s)",
           "year": 2026,
           "doi": "10.55612/s-5002-068-005",
-          "note": "A protocol, not a manifesto: step by step, how to bring AI and virtual spaces into co-design without losing the people who are least online."
+          "note": "Tested in OSMOSI, between Milan and Palermo: AI reads the data and drafts the toolkits, a metaverse room lets people take part from afar. Neither replaces the facilitator in the room."
         }
       ],
       "frontier": "Work in progress: digital clones for marginal rural areas — AI agents that amplify the expertise of local doctors, teachers, farmers and elders to support participatory governance where skills are scarce. Case study: the Madonie, Sicily."
@@ -85,7 +85,7 @@
           "year": 2022,
           "doi": "10.19229/2464-9309/12192022",
           "lang": "it",
-          "note": "The digital transition seen from a design school in the South of Italy: a social question before a technical one."
+          "note": "From experimental 3D printing to open-source AI built by hacktivists: cases where design takes technology back from turbo-capitalism and algorithmic control."
         }
       ]
     },
@@ -98,14 +98,14 @@
           "venue": "FrancoAngeli, co-edited with Laura Galluzzo",
           "year": 2025,
           "isbn": "9788835183099",
-          "note": "The book of OSMOSI. Places that are half physical and half digital, and the question that matters most: who gets to run them."
+          "note": "Places that blur public and private, temporary and permanent, physical and digital — and the question that decides whether they work: who gets to run them."
         },
         {
           "title": "Urban Innovation Through Co-design Scenarios. Lessons from Palermo",
           "venue": "Springer",
           "year": 2019,
           "doi": "10.1007/978-3-319-92022-1_10",
-          "note": "How MUV was designed with citizens in Palermo before a single line of code was written. Co-design as infrastructure, not as consultation."
+          "note": "MUV was co-designed with citizens in Palermo's old town before a line of code was written. Co-design as a learning infrastructure, not as consultation."
         }
       ]
     },
@@ -132,14 +132,14 @@
           "venue": "Energies",
           "year": 2022,
           "doi": "10.3390/en15020396",
-          "note": "If citizens cut emissions, someone can value it. A scheme where university commuters earn environmental credits: the first step towards the carbon credits MUV issues today."
+          "note": "357 students and one app, trafficO2. The proposal: turn the energy they save on the way to campus into white certificates the university can trade, and give the value back as lower fees."
         },
         {
           "title": "Circular Cities: A Systematic Literature Review of Urban Strategies for Sustainable Transitions",
           "venue": "Sustainability",
           "year": 2026,
           "doi": "10.3390/su18062980",
-          "note": "A systematic review written with colleagues from energy and engineering. Circular cities work where digital tools, participation and local policy move together; my part was the participation."
+          "note": "A review led by colleagues in energy engineering, with a conclusion my own work keeps meeting: circular cities move only where digital tools, participation and local policy move together."
         }
       ]
     },
@@ -149,11 +149,11 @@
       "refs": [
         {
           "title": "Habitat e servizi. Ripensare l'abitare cooperativo",
-          "venue": "Quodlibet",
+          "venue": "in Come fare casa. Abitare cooperativo e architettura dei luoghi domestici, Quodlibet",
           "year": 2025,
           "isbn": "9788822923875",
           "lang": "it",
-          "note": "Housing cooperatives as service systems: what living together needs beyond the walls."
+          "note": "Written for Confcooperative Habitat's seventieth anniversary: housing cooperatives as service systems, and what living together needs beyond the walls."
         },
         {
           "title": "New digital instruments for the community building in housing cooperatives",

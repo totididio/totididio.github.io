@@ -218,6 +218,23 @@ main > section > * + * { margin-top: var(--s6); }
 .bridge { font-size: var(--fs-m); line-height: 1.55; }
 .bridge .coda { color: var(--ink-soft); }
 
+/* Photographs: one at a time, swipe or arrows, never autoplay. All share one size and
+   one treatment, so the sequence reads as a series, not a gallery. */
+.slider { margin: var(--s12) 0 0; max-width: 52rem; }
+.slides { display: grid; grid-auto-flow: column; grid-auto-columns: 100%; overflow-x: auto;
+  scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; scrollbar-width: none; }
+.slides::-webkit-scrollbar { display: none; }
+.slide { margin: 0; scroll-snap-align: start; }
+.slide.later { display: none; }
+.slider.ready .slide.later { display: block; }
+.slide img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border: 1px solid var(--line); background: var(--line); }
+.slide figcaption { font-family: var(--font-sans); font-size: var(--fs-xs); color: var(--ink-soft); margin-top: var(--s3); }
+.slider-nav { display: flex; align-items: center; gap: var(--s4); margin-top: var(--s2); font-family: var(--font-sans); font-size: var(--fs-xs); color: var(--ink-soft); }
+.slider-nav button { min-width: 44px; min-height: 44px; border: 1px solid var(--line); background: none; color: var(--ink); font: inherit; font-size: var(--fs-s); cursor: pointer; transition: transform 160ms var(--ease-out); }
+.slider-nav button:active { transform: scale(0.97); }
+.slider-nav .count { font-family: var(--font-mono); }
+@media (prefers-reduced-motion: reduce) { .slides { scroll-behavior: auto; } }
+
 /* ---------- 3. now ---------- */
 
 .now ul { list-style: none; margin: 0; padding: 0; }

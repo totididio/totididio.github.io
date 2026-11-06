@@ -21,17 +21,17 @@ updated: 2026-11-05
           <tr><th scope="col">Home page</th><th scope="col">Measured</th><th scope="col">Budget</th></tr>
         </thead>
         <tbody>
-          <tr><td>Total weight on first visit</td><td class="num">79 KB</td><td class="num">150 KB</td></tr>
-          <tr><td>Emissions per visit</td><td class="num">0.010 g CO<sub>2</sub>e</td><td class="num">0.03 g</td></tr>
-          <tr><td>Stylesheet, compressed</td><td class="num">3.0 KB</td><td class="num">8 KB</td></tr>
-          <tr><td>JavaScript</td><td class="num">&lt; 1 KB</td><td class="num">1 KB</td></tr>
+          <tr><td>Total weight on first visit</td><td class="num">57 KB</td><td class="num">150 KB</td></tr>
+          <tr><td>Emissions per visit</td><td class="num">0.007 g CO<sub>2</sub>e</td><td class="num">0.03 g</td></tr>
+          <tr><td>Stylesheet, compressed</td><td class="num">3.5 KB</td><td class="num">8 KB</td></tr>
+          <tr><td>JavaScript, compressed</td><td class="num">0.8 KB</td><td class="num">1 KB</td></tr>
           <tr><td>Requests to other companies while loading</td><td class="num">0</td><td class="num">0</td></tr>
         </tbody>
       </table>
     </div>
-    <p>Measured on 5 November 2026. The median desktop home page weighed 2,862 KB in the
+    <p>Measured on 6 November 2026, on a first visit. The median desktop home page weighed 2,862 KB in the
        <a href="https://almanac.httparchive.org/en/2025/page-weight">2025 Web Almanac</a>:
-       this one is about thirty-six times lighter. Every page carries its own figure in the
+       this one is about fifty times lighter. Every page carries its own figure in the
        footer, computed when the site is built.</p>
   </section>
 
@@ -51,11 +51,12 @@ updated: 2026-11-05
     <ul>
       <li><strong>Fonts already on your device.</strong> No font is downloaded, so nothing is
           fetched from another company and nothing shifts while the page loads.</li>
-      <li><strong>HTML and CSS, almost no JavaScript.</strong> One small script turns a talk
-          link into a player when you click it. With JavaScript switched off, the link still
-          works.</li>
-      <li><strong>Images in AVIF</strong>, with WebP for older browsers, sized for the space
-          they occupy, with location and camera metadata removed.</li>
+      <li><strong>HTML and CSS, almost no JavaScript.</strong> Two small scripts: one turns a
+          talk link into a player when you click it, the other moves through the photographs.
+          With JavaScript switched off, the links still work and the first photograph is shown.</li>
+      <li><strong>Images in AVIF</strong>, sized for the space they occupy, with location and
+          camera metadata removed. In the photographs on the home page, only the first loads
+          with the page; each of the others is fetched when you are about to reach it.</li>
       <li><strong>Videos load only when asked for.</strong> An embedded player costs more than
           half a megabyte to every visitor, including those who never press play.</li>
       <li><strong>No analytics, no cookies, no forms.</strong> See the
