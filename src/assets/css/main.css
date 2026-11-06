@@ -387,6 +387,11 @@ code { font-family: var(--font-mono); font-size: 0.9em; }
 
 .page h2 .when { font-family: var(--font-mono); font-size: var(--fs-xs); font-weight: 400; color: var(--accent-2); margin-left: var(--s2); }
 .page h3 { margin-top: var(--s8); }
+.page > section { display: flow-root; }
+.portrait { margin: 0 0 var(--s6); max-width: 14rem; }
+.portrait img { border: 1px solid var(--line); }
+.portrait figcaption { font-family: var(--font-sans); font-size: var(--fs-xs); color: var(--ink-soft); margin-top: var(--s2); }
+@media (min-width: 48rem) { .portrait { float: right; margin: 0 0 var(--s6) var(--s8); } }
 .facts { max-width: var(--measure); margin: 0; }
 .facts dt { font-family: var(--font-sans); font-size: var(--fs-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft); margin-top: var(--s4); }
 .facts dd { margin: var(--s1) 0 0; }
