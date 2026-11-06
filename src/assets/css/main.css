@@ -396,6 +396,7 @@ code { font-family: var(--font-mono); font-size: 0.9em; }
 .page .refs, .page .links { list-style: none; padding-left: 0; }
 .refs li + li { margin-top: var(--s4); }
 .refs .venue { display: block; font-family: var(--font-sans); font-size: var(--fs-xs); color: var(--ink-soft); }
+.refs .note { display: block; margin-top: var(--s2); max-width: var(--measure); }
 .frontier { border-left: 3px solid var(--accent-2); padding-left: var(--s4); }
 .page .facade + .facade { margin-top: var(--s4); }
 

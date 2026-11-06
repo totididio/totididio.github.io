@@ -32,7 +32,11 @@ description: "How design can produce more sustainable behaviour in cities: open 
       <li>
         {% if r.doi %}<a href="https://doi.org/{{ r.doi }}"{% if r.lang %} lang="{{ r.lang }}"{% endif %}>{{ r.title }}</a>{% else %}<cite{% if r.lang %} lang="{{ r.lang }}"{% endif %}>{{ r.title }}</cite>{% endif %}
         <span class="venue">{{ r.venue }}, {{ r.year }}</span>
+        {%- if r.note %}
+        <span class="note">{{ r.note }}</span>
+        {%- else %}
         {% todo "one or two lines of commentary, in Salvatore's voice" %}
+        {%- endif %}
       </li>
     {%- endfor %}
     </ul>
