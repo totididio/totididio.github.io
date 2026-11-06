@@ -93,7 +93,7 @@ description: "Associate Professor of Design at the University of Palermo. I desi
   <p class="facade-note">The player loads from YouTube only when you click: from then on Google
      receives your IP address.{% if "/privacy/" | hasPage(collections.all) %} <a href="/privacy/#video">More in the privacy page</a>.{% endif %}</p>
 
-  <div class="scroll-x">
+  <div class="scroll-x" tabindex="0" role="region" aria-label="Table, scrolls sideways on small screens">
     <table class="data">
       <caption class="visually-hidden">Other talks and interviews</caption>
       <thead>
@@ -132,15 +132,4 @@ description: "Associate Professor of Design at the University of Palermo. I desi
   {%- endif %}
 </section>
 
-<script>/* video facade — the only script on this site */
-document.querySelectorAll("a[data-embed]").forEach(function(a){
-  a.addEventListener("click",function(e){
-    var id=a.dataset.embed; if(!id) return;
-    e.preventDefault();
-    var f=document.createElement("iframe");
-    f.src="https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1";
-    f.title=a.textContent.trim(); f.width=560; f.height=315; f.allow="autoplay; fullscreen";
-    f.style.cssText="width:100%;aspect-ratio:16/9;border:0;display:block";
-    a.replaceWith(f); f.focus();
-  });
-});</script>
+{% include "partials/facade-script.njk" %}

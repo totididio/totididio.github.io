@@ -1,0 +1,12 @@
+<script>/* video facade — the only script on this site: a link becomes a player on click */
+document.querySelectorAll("a[data-embed]").forEach(function(a){
+  a.addEventListener("click",function(e){
+    var id=a.dataset.embed; if(!id) return;
+    e.preventDefault();
+    var f=document.createElement("iframe");
+    f.src="https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1";
+    f.title=a.textContent.trim(); f.width=560; f.height=315; f.allow="autoplay; fullscreen";
+    f.style.cssText="width:100%;aspect-ratio:16/9;border:0;display:block";
+    a.replaceWith(f); f.focus();
+  });
+});</script>

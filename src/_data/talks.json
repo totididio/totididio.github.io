@@ -34,5 +34,47 @@
       "year": 2025,
       "lang": "en"
     }
+  ],
+  "invited": [
+    {
+      "year": 2026,
+      "title": "GenAI for Sustainable Mobility Behaviour Change: MUV's AI-Driven Game Engine",
+      "event": "Innovate4Cities 2026 (UN-Habitat and the Global Covenant of Mayors), Nairobi"
+    },
+    {
+      "year": 2026,
+      "title": "Designing Climate Information Services: A Case for Service Remanufacturing from Northern Ghana",
+      "event": "EuAReman 2026, Europe–Africa Workshop on Remanufacturing, CNR Palermo"
+    },
+    {
+      "year": 2026,
+      "title": "Round table on artificial intelligence in university teaching",
+      "event": "Didacta 2026, organised by the Italian Ministry of University and Research and Fondazione CRUI"
+    },
+    {
+      "year": 2025,
+      "title": "Politicians Exchange Forum, invited by EIT Urban Mobility",
+      "event": "CIVITAS 2025 Urban Mobility Days, Vilnius"
+    },
+    {
+      "year": 2024,
+      "title": "Enhancing Public Participation in Urban Design through Digital Tools and Community Engagement (panel organiser)",
+      "event": "World Urban Forum 12 (UN-Habitat), Cairo"
+    },
+    {
+      "year": 2019,
+      "title": "MUV: The citizen-driven sustainable mobility game-changer",
+      "event": "Smart City World Congress, Barcelona"
+    },
+    {
+      "year": 2016,
+      "title": "Service Design for Urban Innovation (workshop organiser)",
+      "event": "Habitat III, United Nations Conference on Housing and Sustainable Urban Development, Quito"
+    },
+    {
+      "year": 2014,
+      "title": "Mobility and Behaviours: trafficO2",
+      "event": "Behavior, Energy and Climate Change Conference, Washington DC"
+    }
   ]
 }
