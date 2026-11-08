@@ -14,6 +14,21 @@ export default function (eleventyConfig) {
 
   // A link is printed only when its page exists, so the site can be published
   // one page at a time without ever shipping a 404.
+  // External links open in a new tab, and say so to screen readers. Video facades are
+  // skipped: their script turns them into a player in place. trafficO2 always gets its subscript.
+  eleventyConfig.addTransform("links-and-chemistry", function (content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    const i = content.indexOf("<body");
+    if (i < 0) return content;
+    let body = content.slice(i);
+    body = body.replace(/<a ([^>]*?href="https?:\/\/(?!(?:www\.)?salvatoredidio\.com)[^"]*"[^>]*)>([\s\S]*?)<\/a>/g,
+      (m, attrs, inner) => attrs.includes("data-embed") || attrs.includes("target=") ? m
+        : `<a ${attrs} target="_blank" rel="noopener">${inner}<span class="visually-hidden"> (opens in a new tab)</span></a>`);
+    let prev;
+    do { prev = body; body = body.replace(/(>[^<]*?\b[Tt]rafficO)2\b/g, "$1<sub>2</sub>"); } while (body !== prev);
+    return content.slice(0, i) + body;
+  });
+
   eleventyConfig.addFilter("hasPage", (url, all) =>
     (all || []).some((p) => p.url === url));
   eleventyConfig.addFilter("existingPages", (items, all) =>

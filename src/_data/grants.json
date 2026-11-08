@@ -1,16 +1,16 @@
 {
   "current": [
-    { "role": "Scientific lead", "project": "B-CIRCULAR — circular economy from textile waste across Palermo, Cagliari and Reggio Calabria", "funder": "Fondazione CON IL SUD", "grant": "2024-AMB-01221", "period": "Feb 2026 – Feb 2029" },
+    { "role": "Scientific lead", "project": "B-CIRCULAR: circular economy from textile waste across Palermo, Cagliari and Reggio Calabria", "funder": "Fondazione CON IL SUD", "grant": "2024-AMB-01221", "period": "Feb 2026 – Feb 2029" },
     { "role": "Scientific lead for MUV", "project": "NEXT-GEN URBAN FREIGHT LOGISTICS", "funder": "European Commission, Horizon Europe (MISS-2024)", "grant": null, "period": "since Jan 2026" },
     { "role": "Researcher", "project": "National Centre for Sustainable Mobility (MOST), Spoke 9", "funder": "MUR, NRRP", "grant": null, "period": "since Sep 2025" },
-    { "role": "Researcher", "project": "RUF — Regenerative Urban Farming", "funder": "MUR, NRRP", "grant": null, "period": "since Mar 2024" }
+    { "role": "Researcher", "project": "RUF, Regenerative Urban Farming", "funder": "MUR, NRRP", "grant": null, "period": "since Mar 2024" }
   ],
   "completed": [
-    { "role": "Project Coordinator", "lead": true, "project": "MUV2020 — Mobility Urban Values (Horizon 2020, CIVITAS), 14 partners, 8 countries", "funder": "European Commission, INEA", "grant": "723521", "budget": "€3.9M", "period": "2017 – 2020" },
+    { "role": "Project Coordinator", "lead": true, "project": "MUV2020, Mobility Urban Values (Horizon 2020, CIVITAS), 14 partners, 8 countries", "funder": "European Commission, INEA", "grant": "723521", "budget": "€3.9M", "period": "2017 – 2020" },
     { "role": "Project Coordinator", "lead": true, "project": "trafficO2", "funder": "Italian Ministry of Education and Research (PON)", "grant": "PON04a3_00451", "budget": "€1.57M, of which €1.25M from the Ministry", "period": "2012 – 2015" },
     { "role": "Substitute PI and Director of the University of Palermo research unit", "lead": true, "project": "OSMOSI (PRIN 2022), coordinated by Politecnico di Milano", "funder": "MUR", "grant": "B53D23006700006", "budget": null, "period": "Sep 2023 – Feb 2026" },
     { "role": "Scientific lead", "lead": true, "project": "Museum of the Diffuse Cities of the World", "funder": "MUR, NRRP", "grant": "H53C22000850006", "budget": null, "period": "Dec 2024 – Nov 2025" },
-    { "role": "Scientific lead", "lead": true, "project": "CSX — Citizens' Sustainable eXperience", "funder": "MUR, University of Palermo (Eurostart)", "grant": "B79J21038330001", "budget": null, "period": "Jun 2022 – Jun 2023" },
+    { "role": "Scientific lead", "lead": true, "project": "CSX, Citizens' Sustainable eXperience", "funder": "MUR, University of Palermo (Eurostart)", "grant": "B79J21038330001", "budget": null, "period": "Jun 2022 – Jun 2023" },
     { "role": "Project Management Board", "project": "ANGLE", "funder": "European Union, Erasmus+ KA2", "grant": null, "budget": null, "period": "2020 – 2023" }
   ]
 }

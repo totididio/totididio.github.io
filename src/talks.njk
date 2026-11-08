@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: "Talks and interviews — Salvatore Di Dio"
+title: "Talks and interviews · Salvatore Di Dio"
 description: "TEDx talks, invited talks at international conferences, and interviews."
 permalink: /talks/
 ---
@@ -52,7 +52,7 @@ permalink: /talks/
     <h2 id="interviews">Interviews and podcasts</h2>
     <ul>
     {%- for t in talks.appearances %}
-      <li><a href="{{ t.url }}"{% if t.lang %} lang="{{ t.lang }}"{% endif %}>{{ t.title }}</a> — {{ t.where }}, {{ t.year }}</li>
+      <li><a href="{{ t.url }}"{% if t.lang %} lang="{{ t.lang }}"{% endif %}>{{ t.title }}</a>, {{ t.where }}, {{ t.year }}</li>
     {%- endfor %}
     </ul>
   </section>

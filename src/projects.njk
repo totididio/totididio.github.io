@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: "Projects — Salvatore Di Dio"
+title: "Projects · Salvatore Di Dio"
 description: "Three organisations built as research infrastructure, and the funded projects behind them."
 permalink: /projects/
 ---
@@ -21,6 +21,7 @@ permalink: /projects/
        avoid with an algorithm certified by RINA to ISO 14064-II. A University of Palermo academic
        spin-off since March 2025.</p>
     <dl class="facts">
+      <dt>Founders</dt><dd>I founded it with <a href="https://www.linkedin.com/in/domenicoschillaci/">Domenico Schillaci</a>, <a href="https://www.linkedin.com/in/francescomassa/">Francesco Massa</a>, <a href="https://www.linkedin.com/in/robertofilippi/">Roberto Filippi</a> and <a href="https://www.linkedin.com/in/ugoparodigiusino/">Ugo Parodi Giusino</a>.</dd>
       <dt>Role</dt><dd>Co-Founder · Scientific Director. CEO from January to December 2020.</dd>
       <dt>For the research</dt><dd>Primary longitudinal data on mobility behaviour in over 25 cities,
         behind much of my recent work. It grew out of the Horizon 2020 project MUV2020.</dd>
@@ -28,7 +29,7 @@ permalink: /projects/
       <dt>Recognition</dt><dd>MOST Prize 2025 (€200,000) · ADI Design Index 2020 · Better Together
         Award 2019 (German Federal Ministry for the Environment) · EIT Urban Mobility accelerator 2020.</dd>
     </dl>
-    <p><a href="https://www.muvgame.com/">muvgame.com</a></p>
+    <p><a href="https://www.muvgame.com/">muvgame.com</a> · <a href="https://www.linkedin.com/company/muv-game/">MUV on LinkedIn</a></p>
   </section>
 
   <section aria-labelledby="push">
@@ -37,13 +38,15 @@ permalink: /projects/
        intersection of design, social science and digital technology, in a field chosen on
        purpose: marginal contexts.</p>
     <dl class="facts">
+      <dt>Founders</dt><dd>I founded it with my friends <a href="https://www.linkedin.com/in/domenicoschillaci/">Domenico Schillaci</a>, <a href="https://www.linkedin.com/in/francescomassa/">Francesco Massa</a>, <a href="https://www.linkedin.com/in/robertofilippi/">Roberto Filippi</a> and <a href="https://www.linkedin.com/in/filippimauro/">Mauro Filippi</a>.</dd>
+      <dt>Direction</dt><dd>Today PUSH is run by <a href="https://www.linkedin.com/in/emilia-pardi-206029117/">Emilia Pardi</a> and <a href="https://www.linkedin.com/in/alessandroriv4/">Alessandro Riva</a>.</dd>
       <dt>Role</dt><dd>Co-Founder · Scientific Director. President and Managing Director from 2013 to 2022.</dd>
       <dt>For the research</dt><dd>The living lab where action research happens. Between 2013 and 2020:
         over €5M in applied research funding, 20 funded and 22 self-funded projects, 32 scientific
         articles. Six editions of the Urban Thinkers Campus with UN-Habitat, from 2015 to 2023.</dd>
       <dt>Now</dt><dd>Madonie Living Lab, open innovation in Sicily's inland areas.</dd>
     </dl>
-    <p><a href="https://www.wepush.org/">wepush.org</a></p>
+    <p><a href="https://www.wepush.org/">wepush.org</a> · <a href="https://www.linkedin.com/company/wepush/">PUSH on LinkedIn</a></p>
   </section>
 
   <section aria-labelledby="piranesi">
@@ -52,12 +55,13 @@ permalink: /projects/
        sustainable development. The first company in southern Italy to receive Slate Development
        support from Creative Europe MEDIA, in 2023.</p>
     <dl class="facts">
+      <dt>Founders</dt><dd>I founded it with <a href="https://www.linkedin.com/in/claudiopiranesi/">Claudio Esposito</a>, <a href="https://www.linkedin.com/in/domenicoschillaci/">Domenico Schillaci</a>, <a href="https://www.linkedin.com/in/francescomassa/">Francesco Massa</a> and <a href="https://www.linkedin.com/in/robertofilippi/">Roberto Filippi</a>.</dd>
       <dt>Role</dt><dd>Co-Founder and Advisor.</dd>
       <dt>For the research</dt><dd>Dissemination: the voice that carries results beyond academic
         circles. <cite>Samia: Little Dreamer</cite> (Tribeca Film Festival 2024, Special Mention), <cite>Terra Nova</cite>
         (Torino Film Festival 2023), <cite>Far From Maine</cite> (IFFR Rotterdam 2026).</dd>
     </dl>
-    <p><a href="https://www.piranesiexperience.com/">piranesiexperience.com</a></p>
+    <p><a href="https://www.piranesiexperience.com/">piranesiexperience.com</a> · <a href="https://www.linkedin.com/company/thepiranesiexperience/">The Piranesi Experience on LinkedIn</a></p>
   </section>
 
   <section aria-labelledby="funded">
@@ -81,7 +85,7 @@ permalink: /projects/
         <thead><tr><th scope="col">Role</th><th scope="col">Project</th><th scope="col">Funder</th><th scope="col">Budget</th><th scope="col">Period</th></tr></thead>
         <tbody>
         {%- for g in grants.completed %}
-          <tr><td>{% if g.lead %}<strong>{{ g.role }}</strong>{% else %}{{ g.role }}{% endif %}</td><td>{{ g.project }}{% if g.grant %}<br><span class="num">{{ g.grant }}</span>{% endif %}</td><td>{{ g.funder }}</td><td>{{ g.budget or "—" }}</td><td>{{ g.period }}</td></tr>
+          <tr><td>{% if g.lead %}<strong>{{ g.role }}</strong>{% else %}{{ g.role }}{% endif %}</td><td>{{ g.project }}{% if g.grant %}<br><span class="num">{{ g.grant }}</span>{% endif %}</td><td>{{ g.funder }}</td><td>{{ g.budget or "n/a" }}</td><td>{{ g.period }}</td></tr>
         {%- endfor %}
         </tbody>
       </table>

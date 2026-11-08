@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: "Salvatore Di Dio — Researcher, designer, social entrepreneur"
+title: "Salvatore Di Dio · Researcher, designer, social entrepreneur"
 description: "Associate Professor of Design at the University of Palermo. I design for the gap between what people know about the climate and what they actually do."
 ---
 
@@ -9,7 +9,7 @@ description: "Associate Professor of Design at the University of Palermo. I desi
   <p class="subclaim">How to design for better behaviour, leaner cities and a future by design, not by disaster.</p>
   <p class="tagline">
     <strong>Researcher &middot; Designer &middot; Social entrepreneur</strong><br>
-    <span>Associate Professor of Design &mdash; University of Palermo</span>
+    <span>Associate Professor of Design, University of Palermo</span>
   </p>
 
   {% include "partials/slider.njk" %}
@@ -104,7 +104,7 @@ description: "Associate Professor of Design at the University of Palermo. I desi
         <tr>
           <td><a href="{{ t.url }}"{% if t.lang %} lang="{{ t.lang }}"{% endif %}>{{ t.title }}</a></td>
           <td>{{ t.where }}</td>
-          <td class="num">{{ t.year or "&mdash;" | safe }}</td>
+          <td class="num">{{ t.year }}</td>
         </tr>
         {%- endfor %}
       </tbody>
@@ -117,7 +117,7 @@ description: "Associate Professor of Design at the University of Palermo. I desi
 
 <section class="contact" aria-labelledby="h-contact">
   <h2 id="h-contact">Contact</h2>
-  <p>I answer my own email &mdash; there is no press office. To invite me to speak, to discuss a
+  <p>I answer my own email. There is no press office. To invite me to speak, to discuss a
      thesis, to propose a collaboration: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
 </section>
 

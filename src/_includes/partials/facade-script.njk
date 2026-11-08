@@ -1,4 +1,4 @@
-<script>/* video facade — the only script on this site: a link becomes a player on click */
+<script>/* video facade: a on this site: a link becomes a player on click */
 document.querySelectorAll("a[data-embed]").forEach(function(a){
   a.addEventListener("click",function(e){
     var id=a.dataset.embed; if(!id) return;

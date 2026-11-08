@@ -15,7 +15,7 @@
   "areas": [
     {
       "title": "Games and behaviour change for sustainable mobility",
-      "text": "The core of my work, from trafficO2 in 2012 to MUV. People recognise the climate emergency and still take the car: games designed on solid theory — Self-Determination Theory, player typologies — can build motivation and habits that outlast the rewards.",
+      "text": "The core of my work, from trafficO2 in 2012 to MUV. People recognise the climate emergency and still take the car: games designed on solid theory, such as Self-Determination Theory and player typologies, can build motivation and habits that outlast the rewards.",
       "refs": [
         {
           "title": "Involving people in the building up of smart and sustainable cities: How to influence commuters' behaviors through a mobile app game",
@@ -59,7 +59,7 @@
           "note": "Tested in OSMOSI, between Milan and Palermo: AI reads the data and drafts the toolkits, a metaverse room lets people take part from afar. Neither replaces the facilitator in the room."
         }
       ],
-      "frontier": "Work in progress: digital clones for marginal rural areas — AI agents that amplify the expertise of local doctors, teachers, farmers and elders to support participatory governance where skills are scarce. Case study: the Madonie, Sicily."
+      "frontier": "Work in progress: digital clones for marginal rural areas: AI agents that amplify the expertise of local doctors, teachers, farmers and elders to support participatory governance where skills are scarce. Case study: the Madonie, Sicily."
     },
     {
       "title": "Design education",
@@ -91,14 +91,14 @@
     },
     {
       "title": "Hybrid spaces, co-design and urban social innovation",
-      "text": "Places that are at once physical and digital — cultural hubs, living labs, neighbourhood spaces — and how their design supports participation. Action research with real actors, from Palermo to the Madonie.",
+      "text": "Places that are at once physical and digital, such as cultural hubs, living labs and neighbourhood spaces, and how their design supports participation. Action research with real actors, from Palermo to the Madonie.",
       "refs": [
         {
           "title": "Designing Hybrid Spaces: Envisioning Plural Ecosystems and Socio-Cultural Practices",
           "venue": "FrancoAngeli, co-edited with Laura Galluzzo",
           "year": 2025,
           "isbn": "9788835183099",
-          "note": "Places that blur public and private, temporary and permanent, physical and digital — and the question that decides whether they work: who gets to run them."
+          "note": "Places that blur public and private, temporary and permanent, physical and digital, and the question that decides whether they work: who gets to run them."
         },
         {
           "title": "Urban Innovation Through Co-design Scenarios. Lessons from Palermo",
@@ -111,7 +111,7 @@
     },
     {
       "title": "Sustainable cities: mobility, data and policy",
-      "text": "Urban mobility as the meeting point of service design, data, public policy and behaviour — and the wider question of how cities move towards circularity.",
+      "text": "Urban mobility as the meeting point of service design, data, public policy and behaviour, and the wider question of how cities move towards circularity.",
       "refs": [
         {
           "title": "Designing mobility in a city in transition: challenges from the case of Palermo",

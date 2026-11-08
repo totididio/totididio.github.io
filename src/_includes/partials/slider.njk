@@ -6,7 +6,7 @@
   {%- for s in slides %}
     <figure class="slide{% if not loop.first %} later{% endif %}" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ slides.length }}">
       <img {% if loop.first %}src{% else %}data-lazy{% endif %}="/assets/img/{{ s.file }}.avif" width="1200" height="800" decoding="async" alt="{{ s.alt }}">
-      <figcaption>{{ s.caption }} Photograph by the author.</figcaption>
+      <figcaption>{{ s.caption }} {{ s.credit or "Photograph by the author." }}</figcaption>
     </figure>
   {%- endfor %}
   </div>
