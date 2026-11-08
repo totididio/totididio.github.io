@@ -41,7 +41,7 @@ permalink: /talks/
         <thead><tr><th scope="col">Year</th><th scope="col">Talk</th><th scope="col">Where</th></tr></thead>
         <tbody>
         {%- for t in talks.invited %}
-          <tr><td class="num">{{ t.year }}</td><td>{{ t.title }}</td><td>{{ t.event }}</td></tr>
+          <tr><td class="num">{{ t.year }}</td><td>{% if t.url %}<a href="{{ t.url }}">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}</td><td>{{ t.event }}</td></tr>
         {%- endfor %}
         </tbody>
       </table>

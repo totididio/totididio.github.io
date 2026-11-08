@@ -28,6 +28,22 @@ description: "Associate Professor of Design at the University of Palermo. I desi
   <p class="coda">Four instruments, one line of research.</p>
 </section>
 
+<section aria-labelledby="h-latest-talk">
+  <h2 id="h-latest-talk">Latest talk</h2>
+
+  <!-- Degrades to a plain link with JavaScript off. The script upgrades it into a
+       click-to-load embed, so nobody pays 500 KB for a video they never play. -->
+  <a class="facade" id="talk" href="{{ talks.featured.url }}" data-embed="{{ talks.featured.youtube }}">
+    <span class="cap">
+      <strong lang="{{ talks.featured.lang }}">{{ talks.featured.title }}</strong><br>
+      {{ talks.featured.event }}, {{ talks.featured.year }}
+      <span class="play">Watch the talk &rarr;</span>
+    </span>
+  </a>
+  <p class="facade-note">The player loads from YouTube only when you click: from then on Google
+     receives your IP address.{% if "/privacy/" | hasPage(collections.all) %} <a href="/privacy/#video">More in the privacy page</a>.{% endif %}</p>
+</section>
+
 <section class="now" aria-labelledby="h-now">
   <h2 id="h-now">Now</h2>
   <ul>
@@ -69,18 +85,6 @@ description: "Associate Professor of Design at the University of Palermo. I desi
 
 <section aria-labelledby="h-talk">
   <h2 id="h-talk">Talks and interviews</h2>
-
-  <!-- Degrades to a plain link with JavaScript off. The script upgrades it into a
-       click-to-load embed, so nobody pays 500 KB for a video they never play. -->
-  <a class="facade" id="talk" href="{{ talks.featured.url }}" data-embed="{{ talks.featured.youtube }}">
-    <span class="cap">
-      <strong lang="{{ talks.featured.lang }}">{{ talks.featured.title }}</strong><br>
-      {{ talks.featured.event }}, {{ talks.featured.year }}
-      <span class="play">Watch the talk &rarr;</span>
-    </span>
-  </a>
-  <p class="facade-note">The player loads from YouTube only when you click: from then on Google
-     receives your IP address.{% if "/privacy/" | hasPage(collections.all) %} <a href="/privacy/#video">More in the privacy page</a>.{% endif %}</p>
 
   <div class="scroll-x" tabindex="0" role="region" aria-label="Table, scrolls sideways on small screens">
     <table class="data">
