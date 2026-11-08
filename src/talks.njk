@@ -34,14 +34,14 @@ permalink: /talks/
   </section>
 
   <section aria-labelledby="invited">
-    <h2 id="invited">Selected invited talks</h2>
+    <h2 id="invited">Selected international talks and events</h2>
     <div class="scroll-x" tabindex="0" role="region" aria-label="Table, scrolls sideways on small screens">
       <table class="data text">
-        <caption class="visually-hidden">Selected invited talks</caption>
+        <caption class="visually-hidden">Selected international talks and events</caption>
         <thead><tr><th scope="col">Year</th><th scope="col">Talk</th><th scope="col">Where</th></tr></thead>
         <tbody>
         {%- for t in talks.invited %}
-          <tr><td class="num">{{ t.year }}</td><td>{% if t.url %}<a href="{{ t.url }}">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}</td><td>{{ t.event }}</td></tr>
+          <tr><td class="num">{{ t.year }}</td><td>{% if t.url %}<a href="{{ t.url }}">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}</td><td>{{ t.event }}{% if t.programme %} &middot; <a href="{{ t.programme }}">{{ t.programmeLabel or "programme" }}</a>{% endif %}</td></tr>
         {%- endfor %}
         </tbody>
       </table>

@@ -37,55 +37,83 @@
   ],
   "invited": [
     {
-      "year": 2026,
+      "year": "2026",
       "title": "GenAI for Sustainable Mobility Behaviour Change: MUV's AI-Driven Game Engine",
-      "event": "Innovate4Cities 2026 (UN-Habitat and the Global Covenant of Mayors), Nairobi"
+      "event": "Innovate4Cities 2026 (UN-Habitat and the Global Covenant of Mayors), Nairobi",
+      "url": "https://www.innovate4cities.org/conference-schedule/genai-for-sustainable-mobility-behaviour-change-muvs-ai-driven-game-engine/"
     },
     {
-      "year": 2026,
+      "year": "2026",
       "title": "Designing Climate Information Services: A Case for Service Remanufacturing from Northern Ghana",
-      "event": "EuAReman 2026, Europe–Africa Workshop on Remanufacturing, CNR Palermo"
+      "event": "EuAReman 2026, 1st Europe–Africa Workshop on Remanufacturing, CNR Palermo",
+      "url": "https://www.euareman.org"
     },
     {
-      "year": 2026,
-      "title": "Round table on artificial intelligence in university teaching",
-      "event": "Didacta 2026, organised by the Italian Ministry of University and Research and Fondazione CRUI"
+      "year": "2025",
+      "title": "Engaging Gen Z in Transformational Games: How Complementary Features Enhance Core Mechanics (with Domenico Schillaci)",
+      "event": "GALA 2025, Games and Learning Alliance Conference, Utrecht University",
+      "url": "https://conf.seriousgamessociety.org/program/"
     },
     {
-      "year": 2025,
-      "title": "Digital Design Daring Destiny",
-      "event": "Digital Design Days 2025, Palermo (Student Sessions)",
-      "url": "https://palermo.ddd.live/program/student-sessions/salvatore-di-dio"
+      "year": "2025",
+      "title": "Student-Centred by Design: Enhancing the AI Opportunity Landscape for Higher Education Teaching",
+      "event": "3rd Innovative Pedagogy Symposium, FORTHEM Alliance, Mainz",
+      "programme": "/assets/img/evidence/2025-forthem-mainz.avif"
     },
     {
-      "year": 2025,
-      "title": "GenAI for Sustainable Mobility Behavior Change: Building MUV's AI Driven Game Engine",
-      "event": "9th International Conference on Models and Technologies for Intelligent Transportation Systems (MT-ITS), University of Luxembourg"
-    },
-    {
-      "year": 2025,
+      "year": "2025",
       "title": "Politicians Exchange Forum, invited by EIT Urban Mobility",
-      "event": "CIVITAS 2025 Urban Mobility Days, Vilnius"
+      "event": "CIVITAS 2025 Urban Mobility Days, Vilnius",
+      "url": "https://civitas.eu/resources/politicians-exchange-forum-meeting-30-september-2025-draft-agenda"
     },
     {
-      "year": 2024,
-      "title": "Enhancing Public Participation in Urban Design through Digital Tools and Community Engagement (panel organiser)",
-      "event": "World Urban Forum 12 (UN-Habitat), Cairo"
+      "year": "2025",
+      "title": "GenAI for Sustainable Mobility Behavior Change: Building MUV's AI Driven Game Engine (with Domenico Schillaci)",
+      "event": "9th International Conference on Models and Technologies for Intelligent Transportation Systems (MT-ITS), University of Luxembourg",
+      "url": "https://doi.org/10.1109/MT-ITS68460.2025.11223550"
     },
     {
-      "year": 2019,
+      "year": "2024",
+      "title": "Enhancing Public Participation in Urban Design through Digital Tools and Community Engagement: the cases of Vivo mi Calle and OSMOSI (organiser and facilitator)",
+      "event": "World Urban Forum 12 (UN-Habitat), Cairo",
+      "url": "https://wuf.unhabitat.org/event/wuf12/enhancing-public-participation-urban-design-through-digital-tools-and-community"
+    },
+    {
+      "year": "2015–2023",
+      "title": "Six Urban Thinkers Campuses in Sicily (organiser)",
+      "event": "World Urban Campaign, UN-Habitat",
+      "url": "https://unhabitat.org/urbanthinkers"
+    },
+    {
+      "year": "2019",
       "title": "MUV: The citizen-driven sustainable mobility game-changer",
-      "event": "Smart City World Congress, Barcelona"
+      "event": "Smart City Expo World Congress, Barcelona (Barcelona City Council stand)",
+      "programme": "/assets/img/evidence/2019-scewc-barcelona.avif",
+      "programmeLabel": "session flyer"
     },
     {
-      "year": 2016,
+      "year": "2018",
+      "title": "Design Sprint for Urban Innovation (training, organised with PUSH)",
+      "event": "World Urban Forum 9 (UN-Habitat), Kuala Lumpur",
+      "programme": "/assets/img/evidence/2018-wuf9-kuala-lumpur.avif"
+    },
+    {
+      "year": "2018",
+      "title": "Trends, projections and European case studies about how sharing economy solutions can foster more sustainable transportation (poster, with Giuffrè, Marradi and Schillaci)",
+      "event": "Transportation Research Board 97th Annual Meeting, Washington DC",
+      "url": "https://trid.trb.org/View/1494321"
+    },
+    {
+      "year": "2016",
       "title": "Service Design for Urban Innovation (workshop organiser)",
-      "event": "Habitat III, United Nations Conference on Housing and Sustainable Urban Development, Quito"
+      "event": "Habitat III, United Nations Conference on Housing and Sustainable Urban Development, Quito",
+      "url": "https://habitat3.org/the-conference/village/51-service-design-for-urban-innovation"
     },
     {
-      "year": 2014,
+      "year": "2014",
       "title": "Mobility and Behaviours: trafficO2",
-      "event": "Behavior, Energy and Climate Change Conference, Washington DC"
+      "event": "Behavior, Energy and Climate Change Conference (BECC), Washington DC",
+      "programme": "/assets/img/evidence/2014-becc-washington.avif"
     }
   ]
 }

@@ -33,8 +33,12 @@ const sizeOf = async (p) => (await stat(p).catch(() => ({ size: 0 }))).size;
 const IMG = /\.(avif|webp|png|jpe?g|svg)$/i;
 
 async function assetBytes(html) {
-  const refs = [...html.matchAll(/(?:href|src|srcset)="(\/[^"\s]+\.(?:css|js|avif|webp|png|jpe?g|svg|woff2))/g)]
-    .map((m) => m[1]);
+  // An <a href> to an image is a link, not a download: count href only for
+  // stylesheets and fonts, which the browser fetches with the page.
+  const refs = [
+    ...html.matchAll(/(?:src|srcset)="(\/[^"\s]+\.(?:css|js|avif|webp|png|jpe?g|svg|woff2))/g),
+    ...html.matchAll(/href="(\/[^"\s]+\.(?:css|woff2))"/g),
+  ].map((m) => m[1]);
   const groups = new Map();
   let total = 0;
   for (const url of new Set(refs)) {
