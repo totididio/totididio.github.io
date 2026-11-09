@@ -5,15 +5,20 @@
 
 :root {
   /* Colour. Every token is defined twice, once per theme. A colour that works
-     in light almost never works in dark. All pairs are AAA. */
-  --ink: #16181d;
-  --ink-soft: #5a6068;
-  --paper: #f2f6fb;
-  --line: #dde4ec;
+     in light almost never works in dark. Text pairs are AAA on --paper and --tint.
+     Warm neutral paper: it sits with the Palermo photographs and the serif.
+     Green is the link colour; rust is kept for one job only: hover. */
+  --ink: #1b1a17;
+  --ink-soft: #48453f;
+  --paper: #f5f3ee;
+  --tint: #ebe7de;
+  --line: #dcd6ca;
   --accent: #1c5443;
-  --accent-2: #a34424;
+  --accent-2: #84361a;
   --mark: #fdf3c4;
 
+  /* Two families for text: serif for reading, sans for metadata. Mono is kept for
+     code only; dates and figures use sans with tabular numerals. */
   --font-serif: ui-serif, "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
     Georgia, "Times New Roman", serif;
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
@@ -21,35 +26,37 @@
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", monospace;
 
-  /* Major third, 1.25 */
+  /* One scale, ratio 1.25 on a 1.125rem base. */
   --fs-xs: 0.8rem;
   --fs-s: 0.9rem;
-  --fs-base: clamp(1.05rem, 1rem + 0.25vw, 1.2rem);
-  --fs-m: 1.25rem;
-  --fs-l: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
-  --fs-xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
-  --fs-claim: clamp(2.2rem, 1.5rem + 4vw, 4rem);
+  --fs-base: clamp(1.0625rem, 1rem + 0.2vw, 1.125rem);
+  --fs-m: clamp(1.25rem, 1.1rem + 0.5vw, 1.4rem);
+  --fs-l: clamp(1.5rem, 1.25rem + 0.9vw, 1.75rem);
+  --fs-xl: clamp(1.8rem, 1.4rem + 1.4vw, 2.2rem);
+  --fs-claim: clamp(2.3rem, 1.4rem + 3.4vw, 3.6rem);
 
   --s1: 0.25rem; --s2: 0.5rem;  --s3: 0.75rem; --s4: 1rem;
   --s6: 1.5rem;  --s8: 2rem;    --s12: 3rem;   --s16: 4rem;
-  --s24: 6rem;   --s32: 8rem;
+  --s24: 6rem;
 
-  --measure: 68ch;
+  --measure: 64ch;
   --page: 72rem;
+  --gutter: clamp(1rem, 0.6rem + 1.6vw, 1.5rem);
+  --gap: var(--s8);
 
   /* Built-in easings are too weak to read as intentional. */
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ink: #e8eaee;
-    --ink-soft: #a2a8b0;
-    --paper: #15181e;
-    --line: #2a2f39;
-    --accent: #6cc4a8;
-    --accent-2: #e8926a;
+    --ink: #ece9e2;
+    --ink-soft: #b3ada2;
+    --paper: #171614;
+    --tint: #201f1c;
+    --line: #34312c;
+    --accent: #7cc9ae;
+    --accent-2: #eb9b74;
     --mark: #43380f;
   }
 }
@@ -78,7 +85,7 @@ h1, h2, h3 {
   margin: 0 0 var(--s4);
 }
 
-h2 { font-size: var(--fs-l); margin-top: 0; }
+h2 { font-size: var(--fs-l); letter-spacing: -0.01em; margin-top: 0; }
 h3 { font-size: var(--fs-m); }
 
 p { margin: 0 0 var(--s4); max-width: var(--measure); }
@@ -105,13 +112,22 @@ img { max-width: 100%; height: auto; display: block; }
 
 mark { background: var(--mark); color: var(--ink); padding: 0 0.2em; }
 
+/* Metadata voice: sans, small, soft, tabular figures. Replaces the old monospace. */
+.meta, .date, .when, .updated {
+  font-family: var(--font-sans);
+  font-size: var(--fs-s);
+  line-height: 1.45;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
 /* ---------- layout ---------- */
 
 .wrap {
   width: 100%;
   max-width: var(--page);
   margin-inline: auto;
-  padding-inline: var(--s6);
+  padding-inline: var(--gutter);
 }
 
 /* Space between sections always exceeds space inside them. This single rule is
@@ -129,28 +145,34 @@ main > section > * + * { margin-top: var(--s6); }
   border: 2px solid var(--accent);
   z-index: 10;
 }
-.skip:focus { left: var(--s6); }
+.skip:focus { left: var(--gutter); }
 
 /* ---------- 1. header + nav ---------- */
 
 .site-head {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s4) var(--s8);
-  align-items: baseline;
+  gap: var(--s2) var(--s8);
+  align-items: center;
   justify-content: space-between;
-  padding-block: var(--s6);
+  padding-block: var(--s4);
   border-bottom: 1px solid var(--line);
 }
 
+/* The name, set in the reading serif: the site is a person, not a brand. */
 .site-head a.home {
-  font-family: var(--font-sans);
-  font-size: var(--fs-s);
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  line-height: 1.2;
   color: var(--ink);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .site-head a.home:hover { color: var(--accent-2); }
 }
 
 /* No hamburger: it needs JS or a :checked hack. On narrow screens the items
@@ -166,14 +188,19 @@ main > section > * + * { margin-top: var(--s6); }
 .site-nav a {
   font-family: var(--font-sans);
   font-size: var(--fs-s);
+  color: var(--ink);
   white-space: nowrap;
   text-decoration: none;
-  padding-block: var(--s2);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   min-height: 44px;
 }
-.site-nav a:hover, .site-nav a[aria-current="page"] { text-decoration: underline; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { text-decoration: underline; color: var(--accent); }
 .site-nav a[aria-current="page"] { color: var(--ink); }
+@media (max-width: 40rem) {
+  .site-head { padding-block: var(--s3); }
+  .site-nav ul { gap: 0 var(--s4); }
+}
 
 /* ---------- 2. claim ---------- */
 
@@ -232,7 +259,7 @@ main > section > * + * { margin-top: var(--s6); }
 .slider-nav { display: flex; align-items: center; gap: var(--s4); margin-top: var(--s2); font-family: var(--font-sans); font-size: var(--fs-xs); color: var(--ink-soft); }
 .slider-nav button { min-width: 44px; min-height: 44px; border: 1px solid var(--line); background: none; color: var(--ink); font: inherit; font-size: var(--fs-s); cursor: pointer; transition: transform 160ms var(--ease-out); }
 .slider-nav button:active { transform: scale(0.97); }
-.slider-nav .count { font-family: var(--font-mono); }
+.slider-nav .count { font-variant-numeric: tabular-nums; }
 @media (prefers-reduced-motion: reduce) { .slides { scroll-behavior: auto; } }
 
 /* ---------- 3. now ---------- */
@@ -246,19 +273,7 @@ main > section > * + * { margin-top: var(--s6); }
 }
 .now li:first-child { border-top: 1px solid var(--line); }
 
-.now .when {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  color: var(--accent-2);
-  margin-top: var(--s1);
-}
-
-.updated {
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  color: var(--ink-soft);
-}
+.now .when { display: block; margin-top: var(--s1); }
 
 /* ---------- 4. project card ---------- */
 
@@ -270,13 +285,7 @@ main > section > * + * { margin-top: var(--s6); }
 
 .card h3 { margin-bottom: var(--s2); }
 .card p { font-size: var(--fs-s); line-height: 1.55; }
-.card .when {
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  color: var(--accent-2);
-  display: block;
-  margin-bottom: var(--s3);
-}
+.card .when { display: block; margin-bottom: var(--s3); }
 
 /* ---------- 5. research line ---------- */
 
@@ -325,7 +334,7 @@ main > section > * + * { margin-top: var(--s6); }
   border-bottom-color: var(--ink-soft);
 }
 .data td:not(:first-child) { color: var(--ink-soft); white-space: nowrap; }
-.data .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.data .num { font-variant-numeric: tabular-nums; }
 
 /* ---------- 7. video facade ---------- */
 
@@ -379,7 +388,9 @@ main > section > * + * { margin-top: var(--s6); }
   color: var(--ink-soft);
 }
 .site-foot p { max-width: var(--measure); margin-bottom: var(--s2); }
-.site-foot .weight { font-family: var(--font-mono); color: var(--ink); }
+.site-foot .weight { color: var(--ink); font-variant-numeric: tabular-nums; }
+.site-foot .impact { color: var(--ink); }
+.site-foot .impact .weight { font-weight: 600; }
 .site-foot ul {
   display: flex;
   flex-wrap: wrap;
@@ -402,7 +413,7 @@ main > section > * + * { margin-top: var(--s6); }
 .page .scroll-x + p { margin-top: var(--s6); }
 code { font-family: var(--font-mono); font-size: 0.9em; }
 
-.page h2 .when { font-family: var(--font-mono); font-size: var(--fs-xs); font-weight: 400; color: var(--accent-2); margin-left: var(--s2); }
+.page h2 .when { font-weight: 400; margin-left: var(--s2); }
 .page h3 { margin-top: var(--s8); }
 .page > section { display: flow-root; }
 .portrait { margin: 0 0 var(--s6); max-width: 14rem; }
