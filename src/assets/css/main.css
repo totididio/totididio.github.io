@@ -6,13 +6,13 @@
 :root {
   /* Colour. Every token is defined twice, once per theme. A colour that works
      in light almost never works in dark. Text pairs are AAA on --paper and --tint.
-     Warm neutral paper: it sits with the Palermo photographs and the serif.
+     Cool blue-grey paper: neutral under the black-and-white Palermo photographs.
      Green is the link colour; rust is kept for one job only: hover. */
-  --ink: #1b1a17;
-  --ink-soft: #48453f;
-  --paper: #f5f3ee;
-  --tint: #ebe7de;
-  --line: #dcd6ca;
+  --ink: #191c1e;
+  --ink-soft: #43494e;
+  --paper: #eaeff1;
+  --tint: #e2e7e9;
+  --line: #d3dadd;
   --accent: #1c5443;
   --accent-2: #84361a;
   --mark: #fdf3c4;
@@ -50,11 +50,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ink: #ece9e2;
-    --ink-soft: #b3ada2;
-    --paper: #171614;
-    --tint: #201f1c;
-    --line: #34312c;
+    --ink: #e8ecee;
+    --ink-soft: #aab1b6;
+    --paper: #15181a;
+    --tint: #1c2023;
+    --line: #2e3337;
     --accent: #7cc9ae;
     --accent-2: #eb9b74;
     --mark: #43380f;
@@ -423,6 +423,7 @@ code { font-family: var(--font-mono); font-size: 0.9em; }
 /* ---------- 12. home: intro and the four instruments ---------- */
 
 .sec .lede { font-size: var(--fs-m); line-height: 1.45; color: var(--ink); max-width: 46ch; }
+.intro .lede { font-family: var(--font-sans); font-size: inherit; line-height: 1.6; max-width: 58ch; color: var(--ink-soft); }
 .mission { max-width: 58ch; color: var(--ink-soft); font-family: var(--font-sans); line-height: 1.6; }
 
 .instruments { display: grid; gap: var(--s4); list-style: none; margin: 0; padding: 0; }
