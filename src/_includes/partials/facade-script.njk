@@ -5,7 +5,7 @@ document.querySelectorAll("a[data-embed]").forEach(function(a){
     e.preventDefault();
     var f=document.createElement("iframe");
     f.src="https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1";
-    f.title=a.textContent.trim(); f.width=560; f.height=315; f.allow="autoplay; fullscreen";
+    f.title=a.dataset.title||a.textContent.trim(); f.width=560; f.height=315; f.allow="autoplay; fullscreen";
     f.style.cssText="width:100%;aspect-ratio:16/9;border:0;display:block";
     a.replaceWith(f); f.focus();
   });

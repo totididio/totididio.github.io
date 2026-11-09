@@ -1,0 +1,30 @@
+[
+  {
+    "verb": "Study it",
+    "name": "University of Palermo",
+    "text": "Research and teaching at the Department of Architecture, since 2020.",
+    "url": "https://www.unipa.it/persone/docenti/d/salvatore.didio",
+    "domain": "unipa.it"
+  },
+  {
+    "verb": "Test it",
+    "name": "PUSH",
+    "text": "A non-profit lab in Palermo where designers and scientists test ideas in real places, since 2013.",
+    "url": "https://www.wepush.org/",
+    "domain": "wepush.org"
+  },
+  {
+    "verb": "Measure it",
+    "name": "MUV",
+    "text": "A game played in over 25 cities. Its CO<sub>2</sub> algorithm is certified by RINA to ISO 14064-II.",
+    "url": "https://www.muvgame.com/",
+    "domain": "muvgame.com"
+  },
+  {
+    "verb": "Tell it",
+    "name": "The Piranesi Experience",
+    "text": "Films made with artists, for people who will never read a paper, from Tribeca to Rotterdam.",
+    "url": "https://www.piranesiexperience.com/",
+    "domain": "piranesiexperience.com"
+  }
+]

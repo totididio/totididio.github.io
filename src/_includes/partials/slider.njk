@@ -5,14 +5,14 @@
   <div class="slides" tabindex="0">
   {%- for s in slides %}
     <figure class="slide{% if not loop.first %} later{% endif %}" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ slides.length }}">
-      <img {% if loop.first %}src{% else %}data-lazy{% endif %}="/assets/img/{{ s.file }}.avif" width="1200" height="800" decoding="async" alt="{{ s.alt }}">
-      <figcaption>{{ s.caption }} {{ s.credit or "Photograph by the author." }}</figcaption>
+      <img {% if loop.first %}src{% else %}data-lazy{% endif %}="/assets/img/{{ s.file }}.avif" width="1200" height="800"{% if loop.first %} fetchpriority="high"{% endif %} decoding="async" alt="{{ s.alt }}">
+      <figcaption class="meta">{{ s.caption }} {{ s.credit or "Photograph by the author." }}</figcaption>
     </figure>
   {%- endfor %}
   </div>
   <div class="slider-nav" hidden>
     <button type="button" data-step="-1" aria-label="Previous photograph">&larr;</button>
-    <span class="count" aria-live="polite">1 / {{ slides.length }}</span>
+    <span class="count meta" aria-live="polite">1 / {{ slides.length }}</span>
     <button type="button" data-step="1" aria-label="Next photograph">&rarr;</button>
   </div>
 </div>

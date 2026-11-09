@@ -1,21 +1,17 @@
 {
   "updated": "2026-11-06",
-  "items": [
+  "news": [
     {
-      "text": "Three projects I worked on were selected for the ADI Design Index 2026: <a href=\"https://www.adi-design.org/2026_r00658\">Instant Handbook</a> (teaching), <a href=\"https://www.adi-design.org/2026_o00681\">OSMOSI</a> (research) and the <a href=\"https://www.adi-design.org/2026_o00531\">Museum of the Diffuse Cities of the World</a> (public engagement)",
-      "when": "October 2026"
+      "when": "Oct 2026",
+      "text": "Three projects selected for the ADI Design Index 2026: <a href=\"https://www.adi-design.org/2026_r00658\">Instant Handbook</a> (teaching), <a href=\"https://www.adi-design.org/2026_o00681\">OSMOSI</a> (research) and the <a href=\"https://www.adi-design.org/2026_o00531\">Museum of the Diffuse Cities of the World</a> (public engagement)"
     },
     {
-      "text": "Member of the Steering Committee on Artificial Intelligence, University of Palermo, advising the Rector on the university's AI strategy",
-      "when": "since May 2025"
+      "when": "2025",
+      "text": "Compasso d’Oro nomination for <cite>Urban Journey of Palermo</cite>"
     },
     {
-      "text": "Member of the University of Palermo's Centre for Sustainability and Ecological Transition, working on SDG 11: sustainable cities and communities",
-      "when": "since June 2025"
-    },
-    {
-      "text": "Deputy Coordinator of the Master's in Interaction Design UX/UI, University of Palermo",
-      "when": "since September 2025"
+      "when": "2025",
+      "text": "MOST Prize of the National Centre for Sustainable Mobility, awarded to MUV"
     }
   ]
 }

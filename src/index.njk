@@ -1,124 +1,192 @@
 ---
 layout: layouts/base.njk
-title: "Salvatore Di Dio · Researcher, designer, social entrepreneur"
+title: "Salvatore Di Dio · Associate Professor of Design, University of Palermo"
 description: "Associate Professor of Design at the University of Palermo. I design for the gap between what people know about the climate and what they actually do."
+fullbleed: true
+credit: "Portrait © PUSH, Mauro Filippi."
 ---
 
-<section class="claim">
-  <h1>Cities change when the people change.</h1>
-  <p class="subclaim">How to design for better behaviour, leaner cities and a future by design, not by disaster.</p>
-  <p class="tagline">
-    <strong>Researcher &middot; Designer &middot; Social entrepreneur</strong><br>
-    <span>Associate Professor of Design, University of Palermo</span>
-  </p>
+{#- 1. Who, then what: name and role first, the claim second, the photographs beside it. -#}
+<section class="hero wrap" aria-labelledby="claim">
+  <div class="who">
+    <p class="eyebrow"><strong>Salvatore Di Dio</strong> &middot; Associate Professor of Design, University of Palermo<br>Researcher, designer, social entrepreneur</p>
+    <h1 id="claim">Cities change when the people change.</h1>
+    <p class="subclaim">How to design for better behaviour, leaner cities and a future by design, not by disaster.</p>
+  </div>
 
   {% include "partials/slider.njk" %}
 </section>
 
-<section class="bridge">
-  <p>Since 2010, with scholars, practitioners and professionals across multiple countries, I have been
-     asking the same question in different settings: why do people who recognise the climate
-     emergency still behave as if it were not happening? It is called the
-     attitude&ndash;behaviour gap, and trying to close it is what I design for.</p>
-  <p>At the <a href="{{ site.unipa }}">University of Palermo</a> I study it. With <a href="https://www.wepush.org/">PUSH</a> we
-     test it in real environments. With <a href="https://www.muvgame.com/">MUV</a> we turned it
-     into a platform that measures what happens. With
-     <a href="https://www.piranesiexperience.com/">Piranesi</a> we tell it to people who will
-     never read a paper.</p>
-  <p class="coda">Four instruments, one line of research.</p>
-</section>
-
-<section aria-labelledby="h-latest-talk">
-  <h2 id="h-latest-talk">Latest talk</h2>
-
-  <!-- Degrades to a plain link with JavaScript off. The script upgrades it into a
-       click-to-load embed, so nobody pays 500 KB for a video they never play. -->
-  <a class="facade" id="talk" href="{{ talks.featured.url }}" data-embed="{{ talks.featured.youtube }}">
-    <span class="cap">
-      <strong lang="{{ talks.featured.lang }}">{{ talks.featured.title }}</strong><br>
-      {{ talks.featured.event }}, {{ talks.featured.year }}
-      <span class="play">Watch the talk &rarr;</span>
-    </span>
-  </a>
-  <p class="facade-note">The player loads from YouTube only when you click: from then on Google
-     receives your IP address.{% if "/privacy/" | hasPage(collections.all) %} <a href="/privacy/#video">More in the privacy page</a>.{% endif %}</p>
-</section>
-
-<section class="now" aria-labelledby="h-now">
-  <h2 id="h-now">Now</h2>
-  <ul>
-    {%- for item in now.items %}
-    <li>{{ item.text | safe }}<span class="when">{{ item.when }}</span></li>
-    {%- endfor %}
-  </ul>
-  <p class="updated">Updated {{ now.updated | readableDate }}</p>
-</section>
-
-<section aria-labelledby="h-projects">
-  <h2 id="h-projects">Active projects</h2>
-  <div class="cards">
-    {%- for p in projects %}
-    <article class="card">
-      <h3>{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</h3>
-      {% if p.when %}<span class="when">{{ p.when }}</span>{% endif %}
-      <p>{{ p.text | safe }}{% if p.todo %} {% todo p.todo %}{% endif %}</p>
-    </article>
-    {%- endfor %}
+<div class="wrap">
+{#- 2. The research question, the way of working, and the four instruments that serve it. -#}
+<section class="sec" aria-labelledby="h-instruments">
+  <div class="label">
+    <h2 id="h-instruments">Why we don&rsquo;t do what we know</h2>
+    <p class="meta">The question behind everything I do</p>
+  </div>
+  <div class="body">
+    <div class="intro">
+      <p class="lede">Most people today recognise the climate emergency. Far fewer change how they live, and those who pay first are those with the least. The climate and social emergencies are one wicked problem.</p>
+      <p class="mission">No single discipline can solve it. I work in transdisciplinary teams of designers, artists and scientists, using publicly engaged research methods across technology, urban sustainability and society, especially in places on the margins of globalisation. The aim is to design for a future that is fair, sustainable and inclusive.</p>
+    </div>
+    <ul class="instruments">
+      {%- for i in instruments %}
+      <li><a class="instrument" href="{{ i.url }}">
+        <span class="verb">{{ i.verb }}</span>
+        <h3>{{ i.name }}</h3>
+        <p>{{ i.text | safe }}</p>
+        <span class="go">{{ i.domain }} &rarr;</span>
+      </a></li>
+      {%- endfor %}
+    </ul>
   </div>
 </section>
 
-<section class="oneline" aria-labelledby="h-research">
-  <h2 id="h-research">Research</h2>
-  <p>Over 50 publications on design, behaviour and urban sustainability, in journals
-     including <cite>Sustainable Cities and Society</cite>, <cite>Sustainability</cite>,
-     <cite>Heliyon</cite> and <cite>Energies</cite>.</p>
-  <ul class="links">
-    <li><a href="https://orcid.org/{{ site.orcid }}">ORCID</a></li>
-{%- if site.scholar %}
-    <li><a href="{{ site.scholar }}">Google Scholar</a></li>
-{%- endif %}
-{%- if "/research/" | hasPage(collections.all) %}
-    <li><a href="/research/">All research</a></li>
-{%- endif %}
-  </ul>
-</section>
-
-<section aria-labelledby="h-talk">
-  <h2 id="h-talk">Talks and interviews</h2>
-
-  <div class="scroll-x" tabindex="0" role="region" aria-label="Table, scrolls sideways on small screens">
-    <table class="data">
-      <caption class="visually-hidden">Other talks and interviews</caption>
-      <thead>
-        <tr><th scope="col">Title</th><th scope="col">Where</th><th scope="col">Year</th></tr>
-      </thead>
-      <tbody>
-        {%- for t in talks.talks %}
-        <tr>
-          <td><a href="{{ t.url }}"{% if t.lang %} lang="{{ t.lang }}"{% endif %}>{{ t.title }}</a></td>
-          <td>{{ t.where }}</td>
-          <td class="num">{{ t.year }}</td>
-        </tr>
-        {%- endfor %}
-        {%- for t in talks.appearances %}
-        <tr>
-          <td><a href="{{ t.url }}"{% if t.lang %} lang="{{ t.lang }}"{% endif %}>{{ t.title }}</a></td>
-          <td>{{ t.where }}</td>
-          <td class="num">{{ t.year }}</td>
-        </tr>
-        {%- endfor %}
-      </tbody>
-    </table>
+{#- 3. Research: the four themes as an index, three recent papers with DOI. -#}
+<section class="sec" aria-labelledby="h-research">
+  <div class="label">
+    <h2 id="h-research">Research</h2>
+    <p class="meta">Over 50 publications on design, behaviour and urban sustainability.</p>
+    <ul class="links">
+      {%- if "/research/" | hasPage(collections.all) %}
+      <li><a href="/research/">All research</a></li>
+      {%- endif %}
+      <li><a href="https://orcid.org/{{ site.orcid }}">ORCID</a></li>
+      {%- if site.scholar %}
+      <li><a href="{{ site.scholar }}">Google Scholar</a></li>
+      {%- endif %}
+    </ul>
   </div>
-  {%- if "/talks/" | hasPage(collections.all) %}
-  <p><a href="/talks/">All talks and interviews</a></p>
-  {%- endif %}
+  <div class="body">
+    <div>
+      <h3 class="sub">Themes</h3>
+      <ol class="themes">
+        {%- for a in research.areas %}
+        <li><a href="/research/#area-{{ loop.index }}">{{ a.title }}</a></li>
+        {%- endfor %}
+      </ol>
+    </div>
+    <div>
+      <h3 class="sub">Recent papers</h3>
+      <ul class="rows">
+        {%- for r in research.recent %}
+        <li>
+          <span class="date">{{ r.year }}</span>
+          <span class="what"><a href="https://doi.org/{{ r.doi }}">{{ r.title }}</a>
+            <span class="where">{{ r.venue }}</span></span>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
 </section>
 
-<section class="contact" aria-labelledby="h-contact">
-  <h2 id="h-contact">Contact</h2>
-  <p>I answer my own email. There is no press office. To invite me to speak, to discuss a
-     thesis, to propose a collaboration: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+{#- 4. Teaching: students are a main audience. -#}
+<section class="sec" aria-labelledby="h-teaching">
+  <div class="label">
+    <h2 id="h-teaching">Teaching</h2>
+    <p class="meta">Courses, {{ courses.year }}</p>
+    {%- if "/teaching/" | hasPage(collections.all) %}
+    <ul class="links">
+      <li><a href="/teaching/">How I teach</a></li>
+    </ul>
+    {%- endif %}
+  </div>
+  <div class="body">
+    <ul class="rows">
+      {%- for c in courses.items %}
+      <li>
+        <span class="date">{{ c.label }}</span>
+        <span class="what">{{ c.name }}
+          <span class="where">{{ c.where }}</span></span>
+      </li>
+      {%- endfor %}
+    </ul>
+    <p>Theses and doctoral proposals on behaviour change, games, generative AI in design or participation in cities: <a href="mailto:{{ site.email }}">write to me</a> with one page on what you would like to study.</p>
+  </div>
 </section>
+</div>
+
+{#- 5. Recent activity on a tinted band: dated news, then talks in one list. -#}
+<div class="band">
+<div class="wrap">
+<section class="sec" aria-labelledby="h-news">
+  <div class="label">
+    <h2 id="h-news">News</h2>
+    <p class="meta">Updated {{ now.updated | readableDate }}</p>
+    {%- if "/about/" | hasPage(collections.all) %}
+    <ul class="links">
+      <li><a href="/about/#positions">Roles and positions</a></li>
+    </ul>
+    {%- endif %}
+  </div>
+  <div class="body">
+    <ul class="rows">
+      {%- for n in now.news %}
+      <li>
+        <span class="date">{{ n.when }}</span>
+        <span class="what">{{ n.text | safe }}</span>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="h-talks">
+  <div class="label">
+    <h2 id="h-talks">Talks and interviews</h2>
+    <p class="meta">In English and Italian</p>
+    {%- if "/talks/" | hasPage(collections.all) %}
+    <ul class="links">
+      <li><a href="/talks/">All talks and interviews</a></li>
+    </ul>
+    {%- endif %}
+  </div>
+  <div class="body">
+    <ul class="rows">
+      {%- set f = talks.featured %}
+      {#- Degrades to a plain link with JavaScript off; the script turns it into a click-to-load player. -#}
+      <li class="featured">
+        <span class="date">{{ f.year }}</span>
+        <span class="what"><strong{% if f.lang %} lang="{{ f.lang }}"{% endif %}>{{ f.title }}</strong>
+          <span class="where">{{ f.event }}</span>
+          <a class="watch" id="talk" href="{{ f.url }}" data-embed="{{ f.youtube }}" data-title="{{ f.title }}, {{ f.event }}">Watch the talk <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          <span class="where facade-note">The player loads from YouTube only when you click: from then on Google receives your IP address.{% if "/privacy/" | hasPage(collections.all) %} <a href="/privacy/#video">More in the privacy page</a>.{% endif %}</span>
+        </span>
+      </li>
+      {%- set i = talks.invited | first %}
+      <li>
+        <span class="date">{{ i.year }}</span>
+        <span class="what"><a href="{{ i.url }}">{{ i.title }}</a>
+          <span class="where">{{ i.event }}</span></span>
+      </li>
+      {%- for t in (talks.appearances | sort(true, false, "year")).concat(talks.talks) %}
+      <li>
+        <span class="date">{{ t.year }}</span>
+        <span class="what"><a href="{{ t.url }}"{% if t.lang and t.lang != "en" %} lang="{{ t.lang }}"{% endif %}>{{ t.title }}</a>
+          <span class="where">{{ t.where }}</span></span>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+</div>
+</div>
+
+{#- 6. Contact, with a face. -#}
+<div class="wrap">
+<section class="sec" id="contact" aria-labelledby="h-contact">
+  <div class="label">
+    <h2 id="h-contact">Contact</h2>
+  </div>
+  <div class="body contact-body">
+    <picture class="avatar">
+      <source srcset="/assets/img/portrait-240.avif" type="image/avif">
+      <img src="/assets/img/portrait-240.jpg" width="240" height="240" loading="lazy" decoding="async" alt="Salvatore Di Dio, smiling, in a dark jacket and white shirt against a light grey wall.">
+    </picture>
+    <p>I answer my own email. To invite me to speak, to discuss a thesis, to propose a collaboration: <a class="mail" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  </div>
+</section>
+</div>
 
 {% include "partials/facade-script.njk" %}

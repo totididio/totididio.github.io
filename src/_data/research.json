@@ -164,5 +164,25 @@
         }
       ]
     }
+  ],
+  "recent": [
+    {
+      "year": 2026,
+      "title": "Engaging Gen Z in Transformational Games: How Complementary Features Enhance Core Mechanics for Sustainable Mobility",
+      "venue": "Games and Learning Alliance, Springer",
+      "doi": "10.1007/978-3-032-11043-5_16"
+    },
+    {
+      "year": 2026,
+      "title": "AI, Metaverse and co-design for social innovation: an application protocol",
+      "venue": "Interaction Design and Architecture(s)",
+      "doi": "10.55612/s-5002-068-005"
+    },
+    {
+      "year": 2025,
+      "title": "GenAI for Sustainable Mobility Behavior Change: Building MUV's AI Driven Game Engine",
+      "venue": "IEEE MT-ITS",
+      "doi": "10.1109/mt-its68460.2025.11223550"
+    }
   ]
 }
