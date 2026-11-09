@@ -94,6 +94,6 @@ person, so almost nothing animates.
 ## Never do without asking
 
 - Add an npm dependency that ends up in the output
-- Add a ninth component to the design system
+- Add an eleventh component to the design system
 - Add a third-party domain, including analytics
 - Raise a budget limit to make something fit

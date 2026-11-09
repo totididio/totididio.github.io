@@ -5,56 +5,64 @@ description: "TEDx talks, invited talks at international conferences, and interv
 permalink: /talks/
 ---
 <article class="page">
-  <header>
+  <header class="page-head">
     <h1>Talks and interviews</h1>
     <p class="lede">To invite me to speak, write to <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
        I speak in English and Italian.</p>
   </header>
 
-  <section aria-labelledby="tedx">
-    <h2 id="tedx">TEDx</h2>
-    <a class="facade" href="{{ talks.featured.url }}" data-embed="{{ talks.featured.youtube }}">
-      <span class="cap">
-        <strong lang="{{ talks.featured.lang }}">{{ talks.featured.title }}</strong><br>
-        {{ talks.featured.event }}, {{ talks.featured.year }}
-        <span class="play">Watch the talk &rarr;</span>
-      </span>
-    </a>
-    {%- for t in talks.talks %}
-    <a class="facade" href="{{ t.url }}" data-embed="{{ t.youtube }}">
-      <span class="cap">
-        <strong lang="{{ t.lang }}">{{ t.title }}</strong><br>
-        {{ t.where }}, {{ t.year }}
-        <span class="play">Watch the talk &rarr;</span>
-      </span>
-    </a>
-    {%- endfor %}
-    <p class="facade-note">The player loads from YouTube only when you
-       click: from then on Google receives your IP address. <a href="/privacy/#video">More in the privacy page</a>.</p>
-  </section>
-
-  <section aria-labelledby="invited">
-    <h2 id="invited">Selected international talks and events</h2>
-    <div class="scroll-x" tabindex="0" role="region" aria-label="Table, scrolls sideways on small screens">
-      <table class="data text">
-        <caption class="visually-hidden">Selected international talks and events</caption>
-        <thead><tr><th scope="col">Year</th><th scope="col">Talk</th><th scope="col">Where</th></tr></thead>
-        <tbody>
-        {%- for t in talks.invited %}
-          <tr><td class="num">{{ t.year }}</td><td>{% if t.url %}<a href="{{ t.url }}">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}</td><td>{{ t.event }}{% if t.programme %} &middot; <a href="{{ t.programme }}">{{ t.programmeLabel or "programme" }}</a>{% endif %}</td></tr>
+  <section class="sec" aria-labelledby="tedx">
+    <div class="label">
+      <h2 id="tedx">TEDx</h2>
+    </div>
+    <div class="body">
+      <ul class="rows">
+        {%- for t in [talks.featured].concat(talks.talks) %}
+        <li class="featured">
+          <span class="date">{{ t.year }}</span>
+          <span class="what"><strong lang="{{ t.lang }}">{{ t.title }}</strong>
+            <span class="where">{{ t.event or t.where }}</span>
+            <a class="watch" href="{{ t.url }}" data-embed="{{ t.youtube }}" data-title="{{ t.title }}, {{ t.event or t.where }}">Watch the talk <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+        </li>
         {%- endfor %}
-        </tbody>
-      </table>
+      </ul>
+      <p class="facade-note">The player loads from YouTube only when you
+         click: from then on Google receives your IP address. <a href="/privacy/#video">More in the privacy page</a>.</p>
     </div>
   </section>
 
-  <section aria-labelledby="interviews">
-    <h2 id="interviews">Interviews and podcasts</h2>
-    <ul>
-    {%- for t in talks.appearances %}
-      <li><a href="{{ t.url }}"{% if t.lang %} lang="{{ t.lang }}"{% endif %}>{{ t.title }}</a>, {{ t.where }}, {{ t.year }}</li>
-    {%- endfor %}
-    </ul>
+  <section class="sec" aria-labelledby="invited">
+    <div class="label">
+      <h2 id="invited">Selected international talks and events</h2>
+    </div>
+    <div class="body">
+      <ul class="rows">
+        {%- for t in talks.invited %}
+        <li>
+          <span class="date">{{ t.year }}</span>
+          <span class="what">{% if t.url %}<a href="{{ t.url }}">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}
+            <span class="where">{{ t.event }}{% if t.programme %} &middot; <a href="{{ t.programme }}">{{ t.programmeLabel or "programme" }}</a>{% endif %}</span></span>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="interviews">
+    <div class="label">
+      <h2 id="interviews">Interviews and podcasts</h2>
+    </div>
+    <div class="body">
+      <ul class="rows">
+        {%- for t in talks.appearances | sort(true, false, "year") %}
+        <li>
+          <span class="date">{{ t.year }}</span>
+          <span class="what"><a href="{{ t.url }}"{% if t.lang and t.lang != "en" %} lang="{{ t.lang }}"{% endif %}>{{ t.title }}</a>
+            <span class="where">{{ t.where }}</span></span>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
   </section>
 </article>
 
