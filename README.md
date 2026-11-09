@@ -2,7 +2,7 @@
 
 Personal site of Salvatore Di Dio. Static, English only, built under a hard carbon budget.
 
-**Home page as built: 79 KB, 3 HTTP requests, 0.010 gCO₂e per visit.** The median web
+**Home page as built: 74 KB, 4 HTTP requests, 0.009 gCO₂e per visit.** The median web
 page in July 2025 was 2,862 KB. That ratio is the argument; keep it true.
 
 ---
@@ -30,7 +30,8 @@ the change is not done — go back, don't raise the limit.
 
 ```
 src/
-  _data/          site.json · now.json · projects.json · talks.json
+  _data/          site.json · now.json · projects.json · talks.json · research.json
+                  instruments.json · courses.json · slides.json
                   Content that changes often lives here, not in templates.
   _includes/      layouts/base.njk · partials/header.njk footer.njk
   assets/css/     main.css — the only stylesheet, no framework
@@ -59,15 +60,17 @@ Load both when working here. `CLAUDE.md` holds the short form of what they say.
 
 ## The design system is closed
 
-Eight components, and the ninth needs an explicit decision. Seven are written:
-header+nav, claim, Now block, project card, research line, data table, video facade,
-footer. The eighth — **publication entry**, for `/research/` — is the only one left.
+Ten components, and the eleventh needs an explicit decision: header+nav, hero,
+section grid + tinted band, instrument card, rows (date | what), theme index,
+publication entry, data table, video facade, footer. The home redesign of November 2026
+replaced the claim, the Now block and the project card; the full table is in
+`../DOCUMENTO-DI-PROGETTO.md` §7.4.
 
-The nine remaining pages are replication, not design. **The CSS should not grow much.**
+The inner pages are replication, not design. **The CSS should not grow much.**
 If a page seems to need a new component, that is a signal to re-read the page, not to
 add CSS.
 
-Current: **2.9 KB Brotli, on a budget of 8.**
+Current: **≈4.6 KB Brotli, on a budget of 8.**
 
 ---
 
