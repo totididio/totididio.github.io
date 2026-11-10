@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
-<meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#fdfdfc" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#111214" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 <link rel="stylesheet" href="/assets/css/main.css">
@@ -15,6 +15,16 @@
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="en_GB">
+{#- Share preview: fetched only by the platforms that build link previews, never by visitors,
+    so it adds nothing to the page weight. A page can set its own with `shareImage` in front matter. -#}
+<meta property="og:image" content="{{ site.url }}{{ shareImage or '/assets/img/share.jpg' }}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ shareImageAlt or 'Salvatore Di Dio, smiling, against a light grey wall.' }}">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
