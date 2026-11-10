@@ -2,7 +2,7 @@
 
 Personal site of Salvatore Di Dio. Static, English only, built under a hard carbon budget.
 
-**Home page as built: 74 KB, 4 HTTP requests, 0.009 gCO₂e per visit.** The median web
+**Home page as built: 73 KB, 4 HTTP requests, 0.009 gCO₂e per visit.** The median web
 page in July 2025 was 2,862 KB. That ratio is the argument; keep it true.
 
 ---
@@ -63,14 +63,15 @@ Load both when working here. `CLAUDE.md` holds the short form of what they say.
 Ten components, and the eleventh needs an explicit decision: header+nav, hero,
 section grid + tinted band, instrument card, rows (date | what), theme index,
 publication entry, data table, video facade, footer. The home redesign of November 2026
-replaced the claim, the Now block and the project card; the full table is in
+replaced the claim, the Now block and the project card; the inner pages now use the same
+section grid under a page head, and talks are rows with a facade link, not cards; the full table is in
 `../DOCUMENTO-DI-PROGETTO.md` §7.4.
 
 The inner pages are replication, not design. **The CSS should not grow much.**
 If a page seems to need a new component, that is a signal to re-read the page, not to
 add CSS.
 
-Current: **≈4.6 KB Brotli, on a budget of 8.**
+Current: **≈4.5 KB Brotli, on a budget of 8.**
 
 ---
 
@@ -93,7 +94,7 @@ Hosting verified green by The Green Web Foundation (5 Nov 2026): `salvatoredidio
 
 | What | Where | Blocks |
 |---|---|---|
-| Poster for the TEDx facade, AVIF ≤ 60 KB | `src/assets/img/` | Nothing — the facade already works as a link. Check the TEDx licence before using a video still |
+| Poster for the TEDx facade, AVIF ≤ 60 KB | `src/assets/img/` | Nothing — the talk already works as a link. Check the TEDx licence before using a video still |
 | Start date and link for Interferenze | `src/_data/projects.json` | Shown as "coming soon" until then |
 | Personal commentary on each publication | — | `/research/`. Half a day of writing with Salvatore. The single highest-value thing left, and the only one nobody else can write |
 

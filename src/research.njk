@@ -4,7 +4,7 @@ title: "Research · Salvatore Di Dio"
 description: "How design can produce more sustainable behaviour in cities: open questions, research areas and selected publications."
 ---
 <article class="page">
-  <header>
+  <header class="page-head">
     <h1>Research</h1>
     <p class="lede">One question runs through everything I have published: how design can produce
        more sustainable behaviour in cities.</p>
@@ -13,45 +13,57 @@ description: "How design can produce more sustainable behaviour in cities: open 
        <cite>{{ research.book.title }}</cite> ({{ research.book.venue }}, {{ research.book.year }}).</p>
   </header>
 
-  <section aria-labelledby="questions">
-    <h2 id="questions">Open questions</h2>
-    <ol class="questions">
-    {%- for q in research.questions %}
-      <li>{{ q }}</li>
-    {%- endfor %}
-    </ol>
+  <section class="sec" aria-labelledby="questions">
+    <div class="label">
+      <h2 id="questions">Open questions</h2>
+    </div>
+    <div class="body">
+      <ol class="questions">
+      {%- for q in research.questions %}
+        <li>{{ q }}</li>
+      {%- endfor %}
+      </ol>
+    </div>
   </section>
 
   {%- for a in research.areas %}
-  <section aria-labelledby="area-{{ loop.index }}">
-    <h2 id="area-{{ loop.index }}">{{ a.title }}</h2>
-    <p>{{ a.text }}</p>
-    <ul class="refs">
-    {%- for r in a.refs %}
-      <li>
-        {% if r.doi %}<a href="https://doi.org/{{ r.doi }}"{% if r.lang %} lang="{{ r.lang }}"{% endif %}>{{ r.title }}</a>{% else %}<cite{% if r.lang %} lang="{{ r.lang }}"{% endif %}>{{ r.title }}</cite>{% endif %}
-        <span class="venue">{{ r.venue }}, {{ r.year }}</span>
-        {%- if r.note %}
-        <span class="note">{{ r.note }}</span>
-        {%- else %}
-        {% todo "one or two lines of commentary, in Salvatore's voice" %}
-        {%- endif %}
-      </li>
-    {%- endfor %}
-    </ul>
-    {%- if a.frontier %}
-    <p class="frontier">{{ a.frontier }}</p>
-    {%- endif %}
+  <section class="sec" aria-labelledby="area-{{ loop.index }}">
+    <div class="label">
+      <h2 id="area-{{ loop.index }}">{{ a.title }}</h2>
+    </div>
+    <div class="body">
+      <p>{{ a.text }}</p>
+      <ul class="refs">
+      {%- for r in a.refs %}
+        <li>
+          {% if r.doi %}<a href="https://doi.org/{{ r.doi }}"{% if r.lang %} lang="{{ r.lang }}"{% endif %}>{{ r.title }}</a>{% else %}<cite{% if r.lang %} lang="{{ r.lang }}"{% endif %}>{{ r.title }}</cite>{% endif %}
+          <span class="venue">{{ r.venue }}, {{ r.year }}</span>
+          {%- if r.note %}
+          <span class="note">{{ r.note }}</span>
+          {%- else %}
+          {% todo "one or two lines of commentary, in Salvatore's voice" %}
+          {%- endif %}
+        </li>
+      {%- endfor %}
+      </ul>
+      {%- if a.frontier %}
+      <p class="frontier">{{ a.frontier }}</p>
+      {%- endif %}
+    </div>
   </section>
   {%- endfor %}
 
-  <section aria-labelledby="all">
-    <h2 id="all">Everything else</h2>
-    <p>The complete list of publications is on ORCID and Google Scholar. Funded projects, with roles
-       and grant numbers, are on the {% if "/projects/" | hasPage(collections.all) %}<a href="/projects/#funded">projects page</a>{% else %}projects page{% endif %}.</p>
-    <ul class="links">
-      <li><a href="https://orcid.org/{{ site.orcid }}">ORCID</a></li>
-      <li><a href="{{ site.scholar }}">Google Scholar</a></li>
-    </ul>
+  <section class="sec" aria-labelledby="all">
+    <div class="label">
+      <h2 id="all">Everything else</h2>
+    </div>
+    <div class="body">
+      <p>The complete list of publications is on ORCID and Google Scholar. Funded projects, with roles
+         and grant numbers, are on the {% if "/projects/" | hasPage(collections.all) %}<a href="/projects/#funded">projects page</a>{% else %}projects page{% endif %}.</p>
+      <ul class="links">
+        <li><a href="https://orcid.org/{{ site.orcid }}">ORCID</a></li>
+        <li><a href="{{ site.scholar }}">Google Scholar</a></li>
+      </ul>
+    </div>
   </section>
 </article>

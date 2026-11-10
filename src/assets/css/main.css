@@ -253,39 +253,8 @@ main > section > * + * { margin-top: var(--s6); }
 
 /* ---------- 7. video facade ---------- */
 
-/* Costs the poster until someone clicks. An embedded player costs 500 KB+ to
-   everyone who never presses play. */
-.facade {
-  max-width: 44rem;
-  border: 1px solid var(--line);
-  background: none;
-  padding: 0;
-  color: inherit;
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-  display: block;
-  width: 100%;
-  transition: transform 160ms var(--ease-out);
-}
-.facade:active { transform: scale(0.99); }
-/* The whole card is the link: underline only the call to action, not every line. */
-.facade { text-decoration: none; }
-.facade .play { text-decoration: underline; text-underline-offset: 0.2em; }
-.facade .cap strong { font-family: var(--font-serif); font-size: var(--fs-m); }
-.facade .cap {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: var(--fs-s);
-  padding: var(--s4);
-}
-.facade .play {
-  font-family: var(--font-sans);
-  font-size: var(--fs-xs);
-  color: var(--accent);
-  display: block;
-  margin-top: var(--s2);
-}
+/* A talk is a plain link (.watch, in the rows below) until someone clicks it:
+   an embedded player costs 500 KB+ to everyone who never presses play. */
 
 /* ---------- 8. footer ---------- */
 
@@ -313,36 +282,37 @@ main > section > * + * { margin-top: var(--s6); }
 .site-foot ul a { min-height: 44px; display: inline-flex; align-items: center; }
 /* Links inside a sentence stay inline: WCAG 2.5.8 exempts them, and a block would break the line. */
 
-/* ---------- 9. text page (privacy, colophon) ---------- */
+/* ---------- 9. inner pages: a page head, then the home's section grid ---------- */
 
-.page { padding-top: var(--s16); }
-.page h1 { font-size: var(--fs-xl); max-width: 20ch; margin-bottom: var(--s6); }
+.page-head { display: grid; gap: var(--s6); padding-block: var(--s16) var(--s12); }
+.page-head h1 { font-size: var(--fs-claim); letter-spacing: -0.02em; line-height: 1.05; max-width: 16ch; margin: 0; }
+.page-head p { margin: 0; }
 .lede { font-size: var(--fs-m); line-height: 1.5; color: var(--ink-soft); }
-.page > section { margin-top: var(--s16); }
-.page ul { max-width: var(--measure); margin: 0; padding-left: 1.2em; }
-.page li + li { margin-top: var(--s3); }
-.page .scroll-x + p { margin-top: var(--s6); }
+.page-head .lede { max-width: 46ch; }
+.page-head .contact { font-size: var(--fs-m); font-weight: 600; overflow-wrap: anywhere; }
+.page .sec { padding-block: var(--s12); }
+@media (min-width: 56rem) { .page .sec { padding-block: var(--s16); } }
+/* Running text flows inside the content column; the home's gap-based body is for blocks. */
+.page .sec > .body { display: block; }
+.page .sec > .body > * + * { margin-top: var(--s4); }
+.page .sec > .body > h3 { margin-top: var(--s8); }
+.page ul:not([class]) { max-width: var(--measure); margin: 0; padding-left: 1.2em; }
+.page ul:not([class]) > li + li { margin-top: var(--s3); }
 code { font-family: var(--font-mono); font-size: 0.9em; }
 
-.page h2 .when { font-weight: 400; margin-left: var(--s2); }
-.page h3 { margin-top: var(--s8); }
-.page > section { display: flow-root; }
-.portrait { margin: 0 0 var(--s6); max-width: 14rem; }
+.portrait { margin: var(--s2) 0 0; max-width: 14rem; }
 .portrait img { border: 1px solid var(--line); }
-.portrait figcaption { font-family: var(--font-sans); font-size: var(--fs-xs); color: var(--ink-soft); margin-top: var(--s2); }
-@media (min-width: 48rem) { .portrait { float: right; margin: 0 0 var(--s6) var(--s8); } }
 .facts { max-width: var(--measure); margin: 0; }
 .facts dt { font-family: var(--font-sans); font-size: var(--fs-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft); margin-top: var(--s4); }
 .facts dd { margin: var(--s1) 0 0; }
 .data.text td:not(:first-child) { white-space: normal; }
 .data.text td.num { white-space: nowrap; }
 .questions { max-width: var(--measure); padding-left: 1.4em; font-size: var(--fs-m); line-height: 1.45; }
-.page .refs, .page .links { list-style: none; padding-left: 0; }
+.page .refs { list-style: none; padding-left: 0; margin: 0; }
 .refs li + li { margin-top: var(--s4); }
 .refs .venue { display: block; font-family: var(--font-sans); font-size: var(--fs-xs); color: var(--ink-soft); }
 .refs .note { display: block; margin-top: var(--s2); max-width: var(--measure); }
 .frontier { border-left: 3px solid var(--accent-2); padding-left: var(--s4); }
-.page .facade + .facade { margin-top: var(--s4); }
 
 /* Under the talk card: what clicking it costs, said before the click. */
 .facade-note {
@@ -509,13 +479,13 @@ code { font-family: var(--font-mono); font-size: 0.9em; }
     scroll-behavior: auto !important;
   }
   a { transition: color 150ms linear; }
-  .facade:active, .instrument:hover, .instrument:active, .watch:hover .arrow { transform: none; }
+  .instrument:hover, .instrument:active, .watch:hover .arrow { transform: none; }
 }
 
 /* ---------- print ---------- */
 
 @media print {
-  .site-nav, .skip, .facade, .slider-nav { display: none; }
+  .site-nav, .skip, .slider-nav { display: none; }
   .band { background: none; }
   body { background: #fff; color: #000; font-size: 11pt; }
   a::after { content: " (" attr(href) ")"; font-size: 9pt; }

@@ -42,6 +42,19 @@ export default function (eleventyConfig) {
     return `<mark class="todo" role="note">TO COMPLETE — ${note}</mark>`;
   });
 
+  // npm run build and build:prod measure the pages after Eleventy has written them.
+  // The dev server has no such step, so it measures here: the local preview then
+  // shows the real weight and CO2 in the footer instead of "…".
+  eleventyConfig.on("eleventy.after", async ({ runMode }) => {
+    if (runMode !== "serve" && runMode !== "watch") return;
+    const { execFile } = await import("node:child_process");
+    await new Promise((done) =>
+      execFile(process.execPath, ["scripts/inject-page-weight.js"], (err) => {
+        if (err) console.warn("[weight] " + err.message.split("\n")[0]);
+        done();
+      }));
+  });
+
   return {
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
     markdownTemplateEngine: "njk",
