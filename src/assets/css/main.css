@@ -6,16 +6,16 @@
 :root {
   /* Colour. Every token is defined twice, once per theme. A colour that works
      in light almost never works in dark. Text pairs are AAA on --paper and --tint.
-     Cool blue-grey paper: neutral under the black-and-white Palermo photographs.
-     Green is the link colour; rust is kept for one job only: hover. */
-  --ink: #191c1e;
-  --ink-soft: #43494e;
-  --paper: #eaeff1;
-  --tint: #e2e7e9;
-  --line: #d3dadd;
-  --accent: #1c5443;
-  --accent-2: #84361a;
-  --mark: #fdf3c4;
+     Near-white paper, as in a journal: it leaves the black-and-white photographs alone.
+     Cobalt is the one colour, and it marks links; on hover a link turns to ink. */
+  --ink: #141414;
+  --ink-soft: #45464a;
+  --paper: #f7f7f5;
+  --tint: #ececea;
+  --line: #dcdcd8;
+  --accent: #1b3fa8;
+  --accent-2: #141414;
+  --mark: #fff1a8;
 
   /* Two families for text: serif for reading, sans for metadata. Mono is kept for
      code only; dates and figures use sans with tabular numerals. */
@@ -50,14 +50,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ink: #e8ecee;
-    --ink-soft: #aab1b6;
-    --paper: #15181a;
-    --tint: #1c2023;
-    --line: #2e3337;
-    --accent: #7cc9ae;
-    --accent-2: #eb9b74;
-    --mark: #43380f;
+    --ink: #ededee;
+    --ink-soft: #a9abb2;
+    --paper: #111214;
+    --tint: #191a1d;
+    --line: #2c2e33;
+    --accent: #86b4ff;
+    --accent-2: #ededee;
+    --mark: #3d3410;
   }
 }
 
