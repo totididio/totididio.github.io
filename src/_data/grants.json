@@ -3,7 +3,7 @@
     { "role": "Scientific lead", "project": "B-CIRCULAR: circular economy from textile waste across Palermo, Cagliari and Reggio Calabria", "funder": "Fondazione CON IL SUD", "grant": "2024-AMB-01221", "period": "Feb 2026 – Feb 2029" },
     { "role": "Scientific lead for MUV", "project": "NEXT-GEN URBAN FREIGHT LOGISTICS", "funder": "European Commission, Horizon Europe (MISS-2024)", "grant": null, "period": "since Jan 2026" },
     { "role": "Researcher", "project": "National Centre for Sustainable Mobility (MOST), Spoke 9", "funder": "MUR, NRRP", "grant": null, "period": "since Sep 2025" },
-    { "role": "Researcher", "project": "RUF, Regenerative Urban Farming", "funder": "MUR, NRRP", "grant": null, "period": "since Mar 2024" }
+    { "role": "Researcher", "project": "CLI-MET, Implementing the climate agenda in metropolitan areas, coordinated by the University of Palermo", "funder": "European Union, Erasmus+ KA220 (higher education)", "grant": "2025-1-IT02-KA220-HED-000362464", "period": "Sep 2025 – Aug 2028" }
   ],
   "completed": [
     { "role": "Project Coordinator", "lead": true, "project": "MUV2020, Mobility Urban Values (Horizon 2020, CIVITAS), 14 partners, 8 countries", "funder": "European Commission, INEA", "grant": "723521", "budget": "€3.9M", "period": "2017 – 2020" },
