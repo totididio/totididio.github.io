@@ -22,12 +22,12 @@ permalink: /talks/
           <span class="date">{{ t.year }}</span>
           <span class="what"><strong lang="{{ t.lang }}">{{ t.title }}</strong>
             <span class="where">{{ t.event or t.where }}</span>
-            <a class="watch" href="{{ t.url }}" data-embed="{{ t.youtube }}" data-title="{{ t.title }}, {{ t.event or t.where }}">Watch the talk <span class="arrow" aria-hidden="true">&rarr;</span></a></span>
+            <a class="watch" href="{{ t.url }}" data-embed="{{ t.youtube }}" data-title="{{ t.title }}, {{ t.event or t.where }}">Watch the talk <span class="arrow" aria-hidden="true">&rarr;</span><span class="visually-hidden">: <span{% if t.lang %} lang="{{ t.lang }}"{% endif %}>{{ t.title }}</span></span></a></span>
         </li>
         {%- endfor %}
       </ul>
       <p class="facade-note">The player loads from YouTube only when you
-         click: from then on Google receives your IP address. <a href="/privacy/#video">More in the privacy page</a>.</p>
+         click: from then on Google receives your IP address. <a href="/privacy/#video">More on the privacy page</a>.</p>
     </div>
   </section>
 
@@ -41,7 +41,7 @@ permalink: /talks/
         <li>
           <span class="date">{{ t.year }}</span>
           <span class="what">{% if t.url %}<a href="{{ t.url }}">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}
-            <span class="where">{{ t.event }}{% if t.programme %} &middot; <a href="{{ t.programme }}">{{ t.programmeLabel or "programme" }}</a>{% endif %}</span></span>
+            <span class="where">{{ t.event }}{% if t.programme %} &middot; <a href="{{ t.programme }}">{{ t.programmeLabel or "programme" }}<span class="visually-hidden"> of {{ t.title }}</span></a>{% endif %}</span></span>
         </li>
         {%- endfor %}
       </ul>

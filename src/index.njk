@@ -87,7 +87,7 @@ credit: "Portrait © PUSH, Mauro Filippi."
     <p class="meta">Courses, {{ courses.year }}</p>
     {%- if "/teaching/" | hasPage(collections.all) %}
     <ul class="links">
-      <li><a href="/teaching/">How I teach</a></li>
+      <li><a href="/teaching/#approach">How I teach</a></li>
     </ul>
     {%- endif %}
   </div>
@@ -115,7 +115,7 @@ credit: "Portrait © PUSH, Mauro Filippi."
     <p class="meta">Updated {{ now.updated | readableDate }}</p>
     {%- if "/about/" | hasPage(collections.all) %}
     <ul class="links">
-      <li><a href="/about/#positions">Roles and positions</a></li>
+      <li><a href="/about/#positions">Positions</a></li>
     </ul>
     {%- endif %}
   </div>
@@ -146,11 +146,11 @@ credit: "Portrait © PUSH, Mauro Filippi."
       {%- set f = talks.featured %}
       {#- Degrades to a plain link with JavaScript off; the script turns it into a click-to-load player. -#}
       <li class="featured">
-        <span class="date">{{ f.year }}</span>
+        <span class="date">{{ f.year }} <span class="pin">Featured</span></span>
         <span class="what"><strong{% if f.lang %} lang="{{ f.lang }}"{% endif %}>{{ f.title }}</strong>
           <span class="where">{{ f.event }}</span>
-          <a class="watch" id="talk" href="{{ f.url }}" data-embed="{{ f.youtube }}" data-title="{{ f.title }}, {{ f.event }}">Watch the talk <span class="arrow" aria-hidden="true">&rarr;</span></a>
-          <span class="where facade-note">The player loads from YouTube only when you click: from then on Google receives your IP address.{% if "/privacy/" | hasPage(collections.all) %} <a href="/privacy/#video">More in the privacy page</a>.{% endif %}</span>
+          <a class="watch" id="talk" href="{{ f.url }}" data-embed="{{ f.youtube }}" data-title="{{ f.title }}, {{ f.event }}">Watch the talk <span class="arrow" aria-hidden="true">&rarr;</span><span class="visually-hidden">: <span{% if f.lang %} lang="{{ f.lang }}"{% endif %}>{{ f.title }}</span></span></a>
+          <span class="where facade-note">The player loads from YouTube only when you click: from then on Google receives your IP address.{% if "/privacy/" | hasPage(collections.all) %} <a href="/privacy/#video">More on the privacy page</a>.{% endif %}</span>
         </span>
       </li>
       {%- set i = talks.invited | first %}
