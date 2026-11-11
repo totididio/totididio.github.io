@@ -2,7 +2,7 @@
 
 Personal site of Salvatore Di Dio. Static, English only, built under a hard carbon budget.
 
-**Home page as built: 73 KB, 4 HTTP requests, 0.009 gCO₂e per visit.** The median web
+**Home page as built: 75 KB, 4 HTTP requests, 0.009 gCO₂e per visit.** The median web
 page in July 2025 was 2,862 KB. That ratio is the argument; keep it true.
 
 ---
@@ -71,7 +71,7 @@ The inner pages are replication, not design. **The CSS should not grow much.**
 If a page seems to need a new component, that is a signal to re-read the page, not to
 add CSS.
 
-Current: **≈4.5 KB Brotli, on a budget of 8.**
+Current: **≈5.0 KB Brotli, on a budget of 8.**
 
 ---
 

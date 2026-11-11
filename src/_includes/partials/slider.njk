@@ -2,7 +2,7 @@
     reach them, so nobody pays for photos they never look at. Without JavaScript only
     the first is shown. -#}
 <div class="slider" role="region" aria-roledescription="carousel" aria-label="Photographs">
-  <div class="slides" tabindex="0">
+  <div class="slides" tabindex="0" role="group" aria-label="Photographs, scroll with the arrow keys">
   {%- for s in slides %}
     <figure class="slide{% if not loop.first %} later{% endif %}" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ slides.length }}">
       <img {% if loop.first %}src{% else %}data-lazy{% endif %}="/assets/img/{{ s.file }}.avif" width="1200" height="800"{% if loop.first %} fetchpriority="high"{% endif %} decoding="async" alt="{{ s.alt }}">
@@ -12,7 +12,7 @@
   </div>
   <div class="slider-nav" hidden>
     <button type="button" data-step="-1" aria-label="Previous photograph">&larr;</button>
-    <span class="count meta" aria-live="polite">1 / {{ slides.length }}</span>
+    <span class="count meta" aria-live="polite"><span aria-hidden="true">1 / {{ slides.length }}</span><span class="visually-hidden">Photograph 1 of {{ slides.length }}</span></span>
     <button type="button" data-step="1" aria-label="Next photograph">&rarr;</button>
   </div>
 </div>
@@ -24,4 +24,4 @@ function at(){return Math.round(s.scrollLeft/s.clientWidth)}
 function near(){var i=at();load(i);load(i+1)}
 ["pointerenter","focusin","touchstart"].forEach(function(e){r.addEventListener(e,near,{once:true,passive:true})});
 n.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var j=(at()+(+b.dataset.step)+k)%k;load(j);load(j+1);s.scrollTo({left:j*s.clientWidth})});
-s.addEventListener("scroll",function(){c.textContent=(at()+1)+" / "+k;near()},{passive:true})})();</script>
+s.addEventListener("scroll",function(){var i=at()+1;c.firstChild.textContent=i+" / "+k;c.lastChild.textContent="Photograph "+i+" of "+k;near()},{passive:true})})();</script>
