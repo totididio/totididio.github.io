@@ -2,7 +2,7 @@
 
 Personal site of Salvatore Di Dio. Static, English only, built under a hard carbon budget.
 
-**Home page as built: 75 KB, 4 HTTP requests, 0.009 gCO₂e per visit.** The median web
+**Home page as built: 76 KB, 4 HTTP requests, 0.009 gCO₂e per visit.** The median web
 page in July 2025 was 2,862 KB. That ratio is the argument; keep it true.
 
 ---
