@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Projects · Salvatore Di Dio"
-description: "Three organisations built as research infrastructure, and the funded projects behind them."
+description: "Three organisations and a university lab built as research infrastructure, and the funded projects behind them."
 permalink: /projects/
 ---
 <article class="page">
@@ -10,7 +10,8 @@ permalink: /projects/
     <p class="lede"><strong>I did not found companies alongside my research.</strong></p>
     <p class="lede">I built the instruments the research required and that did not exist: a platform
        to measure mobility behaviour at urban scale, a laboratory to experiment in real cities,
-       a production company to carry the results outside the academy.</p>
+       a production company to carry the results outside the academy, and a university lab to test
+       AI models and tell the research in sound.</p>
   </header>
 
   <section class="sec" aria-labelledby="muv">
@@ -79,11 +80,44 @@ permalink: /projects/
     </div>
   </section>
 
+  <section class="sec" aria-labelledby="csx">
+    <div class="label">
+      <h2 id="csx">CSX Lab</h2>
+      <p class="meta">Since 2022</p>
+    </div>
+    <div class="body">
+      <p>A research lab at the University of Palermo, born from the project CSX, Citizens' Sustainable
+         eXperience. It takes a life-centred, data-driven approach to the regeneration of urban and
+         rural communities, starting from the Madonie, in inland Sicily.</p>
+      <dl class="facts">
+        <dt>Role</dt><dd>Scientific lead.</dd>
+        <dt>For the research</dt><dd>Computers that run AI models locally, behind the REALCODE proposal
+          to the Italian Science Fund (FIS 3), and a small studio to record podcasts.</dd>
+        <dt>Results</dt><dd>The Urban Thinkers Campus CSX in Petralia Sottana, in September 2023, with
+          UN-Habitat's World Urban Campaign: over 400 activists, researchers and policy makers. The edited
+          volume <cite><a href="https://altralineaedizioni.it/portfolio-item/communities-sustainable-experiences/">Communities' Sustainable Experiences</a></cite>
+          (Altralinea, 2024), with 22 peer-reviewed contributions. Two Horizon Europe proposals led by the
+          University of Palermo, in 2023 and 2024, both evaluated positively but not funded.</dd>
+        <dt>Now</dt><dd><cite>Interferenze</cite>, a podcast co-produced with GIN APS, with Federico M. Butera
+          and Giuseppe Naselli. Six episodes recorded, coming soon.</dd>
+        <dt>Funding</dt><dd>The University of Palermo's Eurostart programme (MUR, D.M. 737/2021), and an
+          additional Eurostart award in 2025.</dd>
+      </dl>
+    </div>
+  </section>
+
   <section class="sec" aria-labelledby="funded">
     <div class="label">
       <h2 id="funded">Funded research</h2>
     </div>
     <div class="body">
+      {#- One cell per project: its name (linked to its site when it has one), the grant number,
+          and the design awards it received, each linked to the award's own page. -#}
+      {%- macro projectCell(g) -%}
+        <td>{% if g.url %}<a href="{{ g.url }}">{{ g.project }}</a>{% else %}{{ g.project }}{% endif %}
+          {%- if g.grant %}<span class="num line">{{ g.grant }}</span>{% endif %}
+          {%- if g.recognition %}<span class="recog line">{% for r in g.recognition %}<a href="{{ r.url }}">{{ r.label }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</span>{% endif %}</td>
+      {%- endmacro %}
       <h3>Current</h3>
       <div class="scroll-x" tabindex="0" role="region" aria-label="Current funded projects, scrolls sideways on small screens">
         <table class="data text">
@@ -91,24 +125,25 @@ permalink: /projects/
           <thead><tr><th scope="col">Role</th><th scope="col">Project</th><th scope="col">Funder</th><th scope="col">Period</th></tr></thead>
           <tbody>
           {%- for g in grants.current %}
-            <tr><td>{{ g.role }}</td><td>{{ g.project }}{% if g.grant %}<br><span class="num">{{ g.grant }}</span>{% endif %}</td><td>{{ g.funder }}</td><td>{{ g.period }}</td></tr>
+            <tr><td>{{ g.role }}</td>{{ projectCell(g) }}<td>{{ g.funder }}</td><td>{{ g.period }}</td></tr>
           {%- endfor %}
           </tbody>
         </table>
       </div>
       <h3>Completed</h3>
-      <div class="scroll-x" tabindex="0" role="region" aria-label="Completed funded projects, scrolls sideways on small screens">
+      <div class="scroll-x" tabindex="0" role="region" aria-label="Completed funded projects, most recent first, scrolls sideways on small screens">
         <table class="data text">
-          <caption class="visually-hidden">Completed funded projects</caption>
+          <caption class="visually-hidden">Completed funded projects, most recent first</caption>
           <thead><tr><th scope="col">Role</th><th scope="col">Project</th><th scope="col">Funder</th><th scope="col">Budget</th><th scope="col">Period</th></tr></thead>
           <tbody>
           {%- for g in grants.completed %}
-            <tr><td>{% if g.lead %}<strong>{{ g.role }}</strong>{% else %}{{ g.role }}{% endif %}</td><td>{{ g.project }}{% if g.grant %}<br><span class="num">{{ g.grant }}</span>{% endif %}</td><td>{{ g.funder }}</td><td>{{ g.budget or "n/a" }}</td><td>{{ g.period }}</td></tr>
+            <tr><td>{% if g.lead %}<strong>{{ g.role }}</strong>{% else %}{{ g.role }}{% endif %}</td>{{ projectCell(g) }}<td>{{ g.funder }}</td><td>{{ g.budget or "n/a" }}</td><td>{{ g.period }}</td></tr>
           {%- endfor %}
           </tbody>
         </table>
       </div>
-      <p>Grant numbers are shown so that each line can be checked.</p>
+      <p>Grant numbers are shown so that each line can be checked. ADI Design Index links lead to
+         the project's page on the ADI site.</p>
     </div>
   </section>
 </article>
