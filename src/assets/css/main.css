@@ -325,6 +325,14 @@ code { font-family: var(--font-mono); font-size: 0.9em; }
 .facts dd { margin: var(--s1) 0 0; }
 .data.text td:not(:first-child) { white-space: normal; }
 .data.text td.num { white-space: nowrap; }
+/* Funded research: where the work was done. Three shapes, so they read apart without colour:
+   UniPa outlined, PUSH filled, MUV dashed. */
+.org { display: inline-block; padding: 0 0.35em; border: 1px solid var(--ink); border-radius: var(--radius); font-size: 0.85em; font-weight: 600; letter-spacing: 0.03em; color: var(--ink); white-space: nowrap; }
+.org abbr { text-decoration: none; }
+.org-push { background: var(--ink); color: var(--paper); }
+.org-muv { border-style: dashed; }
+.data .line { display: block; }
+.data .recog { font-size: 0.92em; }
 .questions { max-width: var(--measure); padding-left: 1.4em; font-size: var(--fs-m); line-height: 1.45; }
 .page .refs { list-style: none; padding-left: 0; margin: 0; }
 .refs li + li { margin-top: var(--s4); }
