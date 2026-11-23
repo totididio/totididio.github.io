@@ -6,7 +6,7 @@
     "award": "Award"
   },
   "items": [
-    { "year": 2007, "type": "academic", "text": "Master's degree in Building Engineering and Architecture, cum laude, University of Palermo" },
+    { "year": 2007, "type": "academic", "text": "Master's degree in Building Engineering and Architecture, cum laude, University of Palermo", "home": "Master's degree" },
     { "year": 2010, "type": "academic", "text": "Second-level Master's in CasaClima, Free University of Bozen-Bolzano" },
     { "year": 2012, "type": "project", "text": "trafficO2, a game for sustainable mobility on students' phones: Project Coordinator", "home": "trafficO2 and MIT" },
     { "year": 2012, "type": "academic", "text": "Visiting student at MIT, Department of Urban Studies and Planning" },

@@ -507,7 +507,7 @@ code { font-family: var(--font-mono); font-size: 0.9em; }
 .tl .what { text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); text-underline-offset: 0.22em; }
 @media (hover: hover) and (pointer: fine) { .tl a:hover .what { text-decoration-color: currentColor; } }
 @media (min-width: 56rem) {
-  .tl { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--s4); padding: calc(var(--dot) + var(--s4)) 0 0; }
+  .tl { grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: var(--s4); padding: calc(var(--dot) + var(--s4)) 0 0; }
   .tl::before { left: 0; right: 0; top: calc(var(--dot) / 2 - 0.5px); bottom: auto; width: auto; height: 1px; transform-origin: left; }
   .tl li::before { left: 0; top: calc(-1 * (var(--dot) + var(--s4))); }
   .tl a { flex-direction: column; align-items: flex-start; align-content: flex-start; gap: var(--s1); }
