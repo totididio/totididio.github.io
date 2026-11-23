@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "About · Salvatore Di Dio"
-description: "Associate Professor of Design at the University of Palermo. Biography, positions, education and awards."
+description: "Associate Professor of Design at the University of Palermo. Biography, timeline, positions, education and awards."
 permalink: /about/
 credit: "Portrait © PUSH, Mauro Filippi."
 ---
@@ -51,6 +51,30 @@ credit: "Portrait © PUSH, Mauro Filippi."
       <p>I have published over 50 scientific contributions and spoken twice at TEDx. I hold a PhD in
          energy and environmental applied physics from the University of Palermo, with a research
          period at MIT in 2012, and I am an Aspen Junior Fellow Alumnus.</p>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="timeline">
+    <div class="label">
+      <h2 id="timeline">Timeline</h2>
+      <ul class="tl-key" aria-label="Key">
+        {%- for key, name in timeline.types %}
+        <li class="t-{{ key }}">{{ name }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div class="body">
+      <ol class="tl-full">
+        {%- for year, items in timeline.items | groupby("year") %}
+        <li id="y{{ year }}"><h3 class="yr">{{ year }}</h3>
+          <ul>
+            {%- for t in items %}
+            <li class="t-{{ t.type }}"><span class="visually-hidden">{{ timeline.types[t.type] }}: </span>{{ t.text }}</li>
+            {%- endfor %}
+          </ul>
+        </li>
+        {%- endfor %}
+      </ol>
     </div>
   </section>
 

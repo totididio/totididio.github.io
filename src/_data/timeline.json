@@ -1,0 +1,43 @@
+{
+  "types": {
+    "project": "Research project or event",
+    "organisation": "Organisation",
+    "academic": "Academic",
+    "award": "Award"
+  },
+  "items": [
+    { "year": 2007, "type": "academic", "text": "Master's degree in Building Engineering and Architecture, cum laude, University of Palermo", "home": "Master's degree" },
+    { "year": 2010, "type": "academic", "text": "Second-level Master's in CasaClima, Free University of Bozen-Bolzano" },
+    { "year": 2012, "type": "project", "text": "trafficO2, a game for sustainable mobility on students' phones: Project Coordinator", "home": "trafficO2 and MIT" },
+    { "year": 2012, "type": "academic", "text": "Visiting student at MIT, Department of Urban Studies and Planning" },
+    { "year": 2013, "type": "organisation", "text": "Co-founder of PUSH, a non-profit design lab in Palermo", "home": "PUSH and Piranesi" },
+    { "year": 2013, "type": "organisation", "text": "Co-founder of The Piranesi Experience, a media production and distribution company" },
+    { "year": 2015, "type": "academic", "text": "PhD in Energy and Environmental Applied Physics, University of Palermo", "home": "PhD" },
+    { "year": 2015, "type": "award", "text": "Smart City Innovation Award, MIT Enterprise Forum and BNP Paribas, to trafficO2" },
+    { "year": 2015, "type": "project", "text": "First Urban Thinkers Campus with UN-Habitat, organised with PUSH: six editions to 2023" },
+    { "year": 2016, "type": "award", "text": "Aspen Junior Fellow, Aspen Institute Italia, to 2018" },
+    { "year": 2017, "type": "project", "text": "MUV2020, Horizon 2020: Project Consortium Coordinator, 14 partners in 8 countries", "home": "MUV2020" },
+    { "year": 2018, "type": "academic", "text": "Book: From Smart to Lean, Altralinea Edizioni" },
+    { "year": 2018, "type": "award", "text": "Compasso d'Oro Honourable Mention, Borgo Vecchio Factory" },
+    { "year": 2019, "type": "award", "text": "Better Together Award, German Federal Ministry for the Environment, to MUV with the City of Palermo" },
+    { "year": 2020, "type": "organisation", "text": "Co-founder of MUV B Corp, and its CEO for the first year" },
+    { "year": 2020, "type": "award", "text": "ADI Design Index, MUV" },
+    { "year": 2020, "type": "academic", "text": "Associate Professor of Design, University of Palermo", "home": "Associate Professor" },
+    { "year": 2022, "type": "project", "text": "CSX, Citizens' Sustainable eXperience: scientific lead" },
+    { "year": 2022, "type": "academic", "text": "Doctoral board, PhD in Architecture, Arts and Planning" },
+    { "year": 2023, "type": "project", "text": "OSMOSI, PRIN 2022: Substitute PI and Director of the University of Palermo research unit", "home": "PRIN OSMOSI" },
+    { "year": 2023, "type": "project", "text": "Urban Thinkers Campus CSX in the Madonie, over 400 participants" },
+    { "year": 2023, "type": "award", "text": "ADI Design Index, DARE" },
+    { "year": 2024, "type": "academic", "text": "Edited volume: Communities' Sustainable Experiences, Altralinea Edizioni" },
+    { "year": 2024, "type": "project", "text": "Museum of the Diffuse Cities of the World, NRRP: scientific lead" },
+    { "year": 2025, "type": "organisation", "text": "MUV becomes a University of Palermo academic spin-off" },
+    { "year": 2025, "type": "award", "text": "MOST Prize, €200,000, to MUV", "home": "MOST Prize" },
+    { "year": 2025, "type": "award", "text": "Compasso d'Oro nominee, Urban Journey of Palermo" },
+    { "year": 2025, "type": "academic", "text": "Deputy Coordinator, Master's in Interaction Design UX/UI" },
+    { "year": 2025, "type": "project", "text": "CLI-MET, Erasmus+: researcher" },
+    { "year": 2026, "type": "project", "text": "NEXTLOGIC, Horizon Europe: scientific lead for MUV" },
+    { "year": 2026, "type": "project", "text": "B-CIRCULAR, Fondazione CON IL SUD: scientific lead" },
+    { "year": 2026, "type": "project", "text": "Research secondment in Tamale, Ghana, MSCA ClearClimate" },
+    { "year": 2026, "type": "award", "text": "ADI Design Index, three projects: Instant Handbook, OSMOSI and the Museum of the Diffuse Cities of the World" }
+  ]
+}
