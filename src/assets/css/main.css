@@ -480,6 +480,63 @@ code { font-family: var(--font-mono); font-size: 0.9em; }
 .contact-body p { font-size: var(--fs-m); line-height: 1.45; }
 .contact-body .mail { font-weight: 600; overflow-wrap: anywhere; }
 
+/* ---------- 11. timeline: a strip on the home, the full list on About ---------- */
+
+/* One dot per milestone; the type is in the shape, not the colour:
+   project ●, organisation ○, academic ■, award ◆. */
+.tl li::before, .tl-full ul > li::before, .tl-key li::before {
+  content: ""; position: absolute; box-sizing: border-box;
+  width: var(--dot); height: var(--dot); border: 2px solid var(--ink); background: var(--ink);
+}
+.t-project::before { border-radius: 50%; }
+.t-organisation::before { border-radius: 50%; background: var(--paper) !important; }
+.t-award::before { transform: rotate(45deg) scale(0.85); background: var(--paper) !important; }
+
+.tl, .tl-full, .tl-key { --dot: 0.75rem; list-style: none; margin: 0; padding: 0; }
+.tl-key { display: grid; gap: var(--s1); font-family: var(--font-sans); font-size: var(--fs-s); color: var(--ink-soft); }
+.tl-key li { position: relative; padding-left: calc(var(--dot) + var(--s2)); }
+.tl-key li::before { left: 0; top: 0.35em; }
+
+/* Home strip: vertical on phones, horizontal from 56rem. */
+.tl { position: relative; display: grid; gap: var(--s2); padding-left: calc(var(--dot) + var(--s4)); }
+.tl::before { content: ""; position: absolute; left: calc(var(--dot) / 2 - 0.5px); top: 0.6rem; bottom: 0.6rem; width: 1px; background: var(--line-strong); transform-origin: top; }
+.tl li { position: relative; }
+.tl li::before { left: calc(-1 * (var(--dot) + var(--s4))); top: calc(50% - var(--dot) / 2); }
+.tl a { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--s3); min-height: 44px; align-content: center; text-decoration: none; color: var(--ink); }
+.tl .yr { font-family: var(--font-sans); font-size: var(--fs-s); font-weight: 600; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.tl .what { text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); text-underline-offset: 0.22em; }
+@media (hover: hover) and (pointer: fine) { .tl a:hover .what { text-decoration-color: currentColor; } }
+@media (min-width: 56rem) {
+  .tl { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--s4); padding: calc(var(--dot) + var(--s4)) 0 0; }
+  .tl::before { left: 0; right: 0; top: calc(var(--dot) / 2 - 0.5px); bottom: auto; width: auto; height: 1px; transform-origin: left; }
+  .tl li::before { left: 0; top: calc(-1 * (var(--dot) + var(--s4))); }
+  .tl a { flex-direction: column; align-items: flex-start; align-content: flex-start; gap: var(--s1); }
+}
+/* The line draws and the milestones arrive as the strip scrolls into view.
+   Tied to scrolling, not to a clock; absent with reduced motion or without support. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .tl { view-timeline: --tl block; }
+    .tl::before { animation: tl-draw-y linear both; animation-timeline: --tl; animation-range: cover 5% cover 30%; }
+    .tl > li { animation: tl-in linear both; animation-timeline: --tl;
+      animation-range: cover calc(6% + var(--i) * 3%) cover calc(13% + var(--i) * 3%); }
+    @media (min-width: 56rem) { .tl::before { animation-name: tl-draw-x; } }
+  }
+}
+@keyframes tl-draw-y { from { transform: scaleY(0); } }
+@keyframes tl-draw-x { from { transform: scaleX(0); } }
+@keyframes tl-in { from { opacity: 0; translate: 0 0.5rem; } }
+
+/* About: years on the left, milestones on a vertical line. */
+.tl-full > li { display: grid; gap: var(--s2) var(--s6); padding-block: var(--s3); scroll-margin-top: var(--s8); }
+@media (min-width: 36rem) { .tl-full > li { grid-template-columns: 4rem minmax(0, 1fr); } }
+.tl-full .yr { font-family: var(--font-sans); font-size: var(--fs-base); font-weight: 600; font-variant-numeric: tabular-nums; }
+.tl-full ul { list-style: none; margin: 0 0 0 calc(var(--dot) / 2); padding: 0 0 0 var(--s6); border-left: 1px solid var(--line-strong); max-width: var(--measure); }
+.tl-full ul > li { position: relative; }
+.tl-full ul > li + li { margin-top: var(--s2); }
+.tl-full ul > li::before { left: calc(-1 * var(--s6) - var(--dot) / 2 - 0.5px); top: 0.45em; }
+.tl-full > li:target .yr { color: var(--accent); }
+
 /* ---------- development placeholders ---------- */
 
 .todo {
