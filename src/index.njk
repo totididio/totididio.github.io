@@ -54,7 +54,7 @@ credit: "Portrait © PUSH, Mauro Filippi."
     <ol class="tl">
       {%- set k = 0 %}
       {%- for t in timeline.items %}{% if t.home %}
-      <li class="t-{{ t.type }}" style="--i: {{ k }}"><a href="/about/#y{{ t.year }}"><span class="yr">{{ t.year }}</span> <span class="what">{{ t.home }}</span></a></li>
+      <li class="t-{{ t.type }}" style="--i: {{ k }}"><a href="/about/#y{{ t.year }}"><span class="yr">{{ t.year }}</span> <span class="what">{{ t.home }}</span>{% if t.homeNote %} <span class="note">{{ t.homeNote }}</span>{% endif %}</a></li>
       {%- set k = k + 1 %}
       {%- endif %}{% endfor %}
     </ol>
