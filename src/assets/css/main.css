@@ -7,7 +7,9 @@
   /* Colour. Every token is defined twice, once per theme. A colour that works
      in light almost never works in dark. Text pairs are AAA on --paper and --tint.
      Near-white paper, as in a journal: it leaves the black-and-white photographs alone.
-     Cobalt is the one colour, and it marks links; on hover a link turns to ink. */
+     Cobalt is the one colour for text, and it marks links; on hover a link turns to ink.
+     Azzurro (--sky) is for graphic details only, never text: timeline, frontier rule,
+     focus ring. 3.4:1 on paper, enough for non-text marks (WCAG 1.4.11). */
   --ink: #141414;
   --ink-soft: #45464a;
   --paper: #fdfdfc;
@@ -16,6 +18,7 @@
   --line-strong: #86878c; /* borders that outline a control: 3:1 on paper */
   --accent: #1b3fa8;
   --accent-2: #141414;
+  --sky: #2f8fd8;
   --mark: #fff1a8;
 
   /* Two families for text: serif for reading, sans for metadata. Mono is kept for
@@ -63,6 +66,7 @@
     --line-strong: #6b6e76;
     --accent: #86b4ff;
     --accent-2: #ededee;
+    --sky: #6cb8f2;
     --mark: #3d3410;
   }
 }
@@ -109,7 +113,7 @@ a {
 
 /* Never outline: none. This is the one style that must survive every redesign. */
 :focus-visible {
-  outline: 3px solid var(--accent);
+  outline: 3px solid var(--sky);
   outline-offset: 3px;
   border-radius: var(--radius);
 }
@@ -332,7 +336,7 @@ code { font-family: var(--font-mono); font-size: 0.9em; }
 .refs li + li { margin-top: var(--s4); }
 .refs .venue { display: block; font-family: var(--font-sans); font-size: var(--fs-s); color: var(--ink-soft); }
 .refs .note { display: block; margin-top: var(--s2); max-width: var(--measure); }
-.frontier { border-left: 3px solid var(--accent-2); padding-left: var(--s4); }
+.frontier { border-left: 3px solid var(--sky); padding-left: var(--s4); }
 
 /* Under the talk card: what clicking it costs, said before the click. */
 .facade-note {
@@ -486,7 +490,7 @@ code { font-family: var(--font-mono); font-size: 0.9em; }
    project ●, organisation ○, academic ■, award ◆. */
 .tl li::before, .tl-full ul > li::before, .tl-key li::before {
   content: ""; position: absolute; box-sizing: border-box;
-  width: var(--dot); height: var(--dot); border: 2px solid var(--ink); background: var(--ink);
+  width: var(--dot); height: var(--dot); border: 2px solid var(--sky); background: var(--sky);
 }
 .t-project::before { border-radius: 50%; }
 .t-organisation::before { border-radius: 50%; background: var(--paper) !important; }
@@ -499,12 +503,13 @@ code { font-family: var(--font-mono); font-size: 0.9em; }
 
 /* Home strip: vertical on phones, horizontal from 56rem. */
 .tl { position: relative; display: grid; gap: var(--s2); padding-left: calc(var(--dot) + var(--s4)); }
-.tl::before { content: ""; position: absolute; left: calc(var(--dot) / 2 - 0.5px); top: 0.6rem; bottom: 0.6rem; width: 1px; background: var(--line-strong); transform-origin: top; }
+.tl::before { content: ""; position: absolute; left: calc(var(--dot) / 2 - 0.5px); top: 0.6rem; bottom: 0.6rem; width: 1px; background: var(--sky); transform-origin: top; }
 .tl li { position: relative; }
 .tl li::before { left: calc(-1 * (var(--dot) + var(--s4))); top: calc(50% - var(--dot) / 2); }
 .tl a { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--s3); min-height: 44px; align-content: center; text-decoration: none; color: var(--ink); }
 .tl .yr { font-family: var(--font-sans); font-size: var(--fs-s); font-weight: 600; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
 .tl .what { text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); text-underline-offset: 0.22em; }
+.tl .note { font-family: var(--font-sans); font-size: var(--fs-s); line-height: 1.35; color: var(--ink-soft); }
 @media (hover: hover) and (pointer: fine) { .tl a:hover .what { text-decoration-color: currentColor; } }
 @media (min-width: 56rem) {
   .tl { grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: var(--s4); padding: calc(var(--dot) + var(--s4)) 0 0; }
@@ -531,7 +536,7 @@ code { font-family: var(--font-mono); font-size: 0.9em; }
 .tl-full > li { display: grid; gap: var(--s2) var(--s6); padding-block: var(--s3); scroll-margin-top: var(--s8); }
 @media (min-width: 36rem) { .tl-full > li { grid-template-columns: 4rem minmax(0, 1fr); } }
 .tl-full .yr { font-family: var(--font-sans); font-size: var(--fs-base); font-weight: 600; font-variant-numeric: tabular-nums; }
-.tl-full ul { list-style: none; margin: 0 0 0 calc(var(--dot) / 2); padding: 0 0 0 var(--s6); border-left: 1px solid var(--line-strong); max-width: var(--measure); }
+.tl-full ul { list-style: none; margin: 0 0 0 calc(var(--dot) / 2); padding: 0 0 0 var(--s6); border-left: 1px solid var(--sky); max-width: var(--measure); }
 .tl-full ul > li { position: relative; }
 .tl-full ul > li + li { margin-top: var(--s2); }
 .tl-full ul > li::before { left: calc(-1 * var(--s6) - var(--dot) / 2 - 0.5px); top: 0.45em; }
